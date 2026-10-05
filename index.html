@@ -1,0 +1,2653 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Каменный Двор — укладка брусчатки в Москве и области</title>
+<meta name="description" content="Укладка брусчатки и тротуарной плитки под ключ: основание по ГОСТ, водоотвод, договор и гарантия 5 лет. Расчёт стоимости за минуту, бесплатный замер по Москве и области.">
+<meta name="theme-color" content="#F2F0EC">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2323262B'/><g fill='%23C2762B'><rect x='16' y='20' width='30' height='24' rx='4'/><rect x='54' y='20' width='30' height='24' rx='4'/><rect x='16' y='56' width='30' height='24' rx='4'/><rect x='54' y='56' width='30' height='24' rx='4'/></g></svg>">
+<link rel="preload" href="assets/fonts/manrope-300-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/oswald-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+/* Шрифты лежат рядом с сайтом — страница не зависит от Google Fonts */
+@font-face{font-family:'Oswald';font-style:normal;font-weight:200 700;font-display:swap;
+  src:url('assets/fonts/oswald-cyrillic.woff2') format('woff2');
+  unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
+@font-face{font-family:'Oswald';font-style:normal;font-weight:200 700;font-display:swap;
+  src:url('assets/fonts/oswald-latin.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:300 800;font-display:swap;
+  src:url('assets/fonts/manrope-300-cyrillic.woff2') format('woff2');
+  unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:300 800;font-display:swap;
+  src:url('assets/fonts/manrope-300-latin.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+
+/* ============================================================
+   Каменный Двор — укладка брусчатки
+   Одностраничный сайт. Чистый HTML/CSS/JS, без библиотек.
+   ============================================================ */
+
+:root{
+  /* палитра: светлый камень + графит + охра */
+  --bg:         #F2F0EC;
+  --bg-deep:    #E8E4DC;
+  --sand:       #DED6C7;
+  --sand-warm:  #CDC0A9;
+  --graphite:   #23262B;
+  --graphite-2: #2E323A;
+  --slate:      #5A6069;
+  --slate-soft: #7C838C;
+  --ochre:      #C2762B;
+  --ochre-deep: #A35F1A;
+  --rust:       #8E4B25;
+  --white:      #FFFFFF;
+
+  /* стекло */
+  --glass:        rgba(255,255,255,.62);
+  --glass-strong: rgba(255,255,255,.82);
+  --glass-line:   rgba(255,255,255,.8);
+  --glass-shadow: 0 18px 46px -22px rgba(35,38,43,.38);
+  --blur:         saturate(150%) blur(16px);
+
+  /* скругления: камень — прямее, чем ресницы */
+  --r-xl: 26px;
+  --r-lg: 20px;
+  --r-md: 14px;
+  --r-sm: 10px;
+  --pill: 999px;
+
+  --wrap: 1180px;
+  --gut: 20px;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *{ animation-duration:.001ms !important; transition-duration:.001ms !important; }
+}
+
+body{
+  margin:0;
+  font-family:"Manrope", -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  color:var(--graphite);
+  background:var(--bg);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* фон: холодный камень с тёплым пятном под охру */
+body::before{
+  content:"";
+  position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(54vw 44vw at 8% -8%,  rgba(222,214,199,.85), transparent 62%),
+    radial-gradient(46vw 40vw at 98% 10%, rgba(205,192,169,.55), transparent 62%),
+    radial-gradient(60vw 50vw at 46% 62%, rgba(255,255,255,.9),  transparent 66%),
+    linear-gradient(180deg,#F4F2EE 0%,#EFECE6 54%,#E9E5DD 100%);
+}
+
+img,video{ display:block; max-width:100%; }
+button{ font:inherit; color:inherit; cursor:pointer; border:0; background:none; }
+a{ color:inherit; text-decoration:none; }
+
+h1,h2,h3,.display{
+  font-family:"Oswald", "Arial Narrow", sans-serif;
+  font-weight:500;
+  line-height:1.08;
+  letter-spacing:.005em;
+  margin:0;
+}
+
+.wrap{ width:100%; max-width:var(--wrap); margin-inline:auto; padding-inline:var(--gut); }
+
+section{ position:relative; padding:60px 0; }
+@media (min-width:900px){ section{ padding:92px 0; } }
+
+/* ---------- типовые элементы ---------- */
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:9px;
+  font-size:11.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ochre-deep);
+  margin-bottom:16px;
+}
+.eyebrow::before{ content:""; width:24px; height:2px; background:currentColor; opacity:.55; }
+
+.h-sec{ font-size:clamp(29px,6.2vw,50px); margin-bottom:14px; text-transform:uppercase; }
+.sub-sec{ color:var(--slate); max-width:58ch; margin:0 0 34px; }
+
+.glass{
+  background:var(--glass);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--glass-line);
+  box-shadow:var(--glass-shadow);
+}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:16px 30px;
+  border-radius:var(--r-sm);
+  font-size:14.5px; font-weight:700; letter-spacing:.03em; text-transform:uppercase;
+  white-space:nowrap;
+  transition:transform .25s cubic-bezier(.2,.8,.3,1), box-shadow .25s, background .25s, color .25s;
+}
+.btn:active{ transform:scale(.98); }
+
+.btn-primary{
+  color:#fff;
+  background:linear-gradient(135deg,var(--ochre) 0%, var(--ochre-deep) 100%);
+  box-shadow:0 14px 28px -14px rgba(163,95,26,.85), inset 0 1px 0 rgba(255,255,255,.26);
+}
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 20px 36px -16px rgba(163,95,26,.9), inset 0 1px 0 rgba(255,255,255,.32);
+}
+
+.btn-dark{
+  color:#fff;
+  background:var(--graphite);
+  box-shadow:0 14px 28px -16px rgba(35,38,43,.8);
+}
+.btn-dark:hover{ transform:translateY(-2px); background:var(--graphite-2); }
+
+.btn-ghost{
+  color:var(--graphite);
+  background:var(--glass-strong);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid rgba(35,38,43,.14);
+  box-shadow:0 10px 24px -18px rgba(35,38,43,.5);
+}
+.btn-ghost:hover{ transform:translateY(-2px); background:#fff; }
+
+.btn-lg{ padding:19px 38px; font-size:15px; }
+
+/* появление при скролле */
+.reveal{
+  opacity:0; transform:translateY(24px);
+  transition:opacity .7s ease, transform .7s cubic-bezier(.2,.8,.3,1);
+}
+.reveal.is-in{ opacity:1; transform:none; }
+
+/* ============================================================
+   ШАПКА
+   ============================================================ */
+.header{
+  position:sticky; top:0; z-index:90;
+  padding:13px 0;
+  transition:padding .3s ease;
+}
+.header::before{
+  content:""; position:absolute; inset:0;
+  background:rgba(242,240,236,0);
+  -webkit-backdrop-filter:blur(0px);
+  backdrop-filter:blur(0px);
+  border-bottom:1px solid transparent;
+  transition:background .35s ease, backdrop-filter .35s ease, border-color .35s ease;
+}
+.header.is-stuck{ padding:8px 0; }
+.header.is-stuck::before{
+  background:rgba(242,240,236,.8);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border-bottom-color:rgba(35,38,43,.1);
+  box-shadow:0 10px 30px -26px rgba(35,38,43,.7);
+}
+
+.header-in{ position:relative; display:flex; align-items:center; gap:16px; }
+
+.logo{ display:flex; align-items:center; gap:11px; margin-right:auto; }
+.logo svg{ width:40px; height:40px; flex:none; }
+.logo-text{ display:flex; flex-direction:column; line-height:1; }
+.logo-name{
+  font-family:"Oswald",sans-serif;
+  font-size:22px; font-weight:600; letter-spacing:.07em; text-transform:uppercase;
+}
+.logo-sub{
+  font-size:8.5px; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--ochre-deep); margin-top:4px; font-weight:700;
+}
+
+.nav{ display:none; gap:24px; font-size:13.5px; font-weight:600; color:var(--slate); }
+@media (min-width:1000px){ .nav{ display:flex; } }
+.nav a{ transition:color .25s; }
+.nav a:hover{ color:var(--ochre-deep); }
+
+.head-phone{
+  display:none; flex-direction:column; align-items:flex-end; line-height:1.2;
+}
+@media (min-width:700px){ .head-phone{ display:flex; } }
+.head-phone b{ font-family:"Oswald",sans-serif; font-size:19px; font-weight:500; letter-spacing:.02em; }
+.head-phone span{ font-size:10.5px; color:var(--slate-soft); letter-spacing:.04em; }
+
+.header .btn{ padding:13px 22px; font-size:12.5px; }
+.btn-short{ display:none; }
+@media (max-width:519px){
+  .header .btn{ padding:12px 15px; font-size:11.5px; }
+  .header .btn .btn-full{ display:none; }
+  .header .btn .btn-short{ display:inline; }
+  .logo-sub{ display:none; }
+}
+
+/* ============================================================
+   ГЛАВНЫЙ ЭКРАН
+   ============================================================ */
+.hero{ padding-top:20px; padding-bottom:52px; }
+@media (min-width:900px){ .hero{ padding-top:30px; padding-bottom:84px; } }
+
+.hero-grid{ display:grid; gap:30px; align-items:center; }
+@media (min-width:900px){ .hero-grid{ grid-template-columns:1.06fr .94fr; gap:52px; } }
+
+.hero h1{
+  font-size:clamp(36px,8.2vw,66px);
+  text-transform:uppercase;
+  letter-spacing:-.005em;
+  margin-bottom:20px;
+}
+.hero h1 em{ font-style:normal; color:var(--ochre-deep); }
+.hero-sub{ font-size:17px; color:var(--slate); max-width:48ch; margin:0 0 30px; }
+.hero-cta{ display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+@media (max-width:519px){
+  .hero-cta{ flex-direction:column; align-items:stretch; }
+  .hero-cta .btn{ width:100%; }
+}
+
+.hero-facts{ display:flex; flex-wrap:wrap; gap:10px; margin-top:30px; }
+.fact{
+  display:inline-flex; align-items:baseline; gap:8px;
+  padding:11px 18px;
+  border-radius:var(--r-sm);
+  background:rgba(255,255,255,.62);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid rgba(255,255,255,.85);
+  font-size:13px; color:var(--slate);
+}
+.fact b{ font-family:"Oswald",sans-serif; font-size:23px; font-weight:600; color:var(--graphite); }
+
+.hero-media{ position:relative; }
+.hero-photo{
+  position:relative;
+  border-radius:var(--r-xl);
+  overflow:hidden;
+  aspect-ratio:4/5;
+  box-shadow:0 40px 74px -40px rgba(35,38,43,.62);
+  border:1px solid rgba(255,255,255,.5);
+}
+.hero-photo img{ width:100%; height:100%; object-fit:cover; }
+.hero-photo::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(195deg, rgba(242,240,236,.12) 0%, transparent 36%, rgba(35,38,43,.32) 100%);
+}
+@media (min-width:900px){ .hero-photo{ aspect-ratio:5/6; } }
+
+.hero-chip{
+  position:absolute; z-index:2;
+  left:-6px; bottom:24px;
+  display:flex; align-items:center; gap:13px;
+  padding:14px 22px 14px 15px;
+  border-radius:var(--r-md);
+  background:var(--glass-strong);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--glass-line);
+  box-shadow:var(--glass-shadow);
+}
+@media (min-width:900px){ .hero-chip{ left:-32px; } }
+.hero-chip-ic{
+  width:42px; height:42px; flex:none;
+  border-radius:var(--r-sm);
+  display:grid; place-items:center;
+  color:#fff;
+  background:linear-gradient(135deg,var(--ochre),var(--ochre-deep));
+}
+.hero-chip-t{ font-size:12.5px; line-height:1.3; color:var(--slate); }
+.hero-chip-t b{ display:block; font-size:14.5px; color:var(--graphite); font-weight:700; }
+
+/* ============================================================
+   ТРИ ПРИЧИНЫ
+   ============================================================ */
+.rows{ display:grid; gap:14px; }
+
+.row{
+  display:grid; gap:20px; align-items:center;
+  padding:18px;
+  border-radius:var(--r-lg);
+  background:var(--glass);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--glass-line);
+  box-shadow:var(--glass-shadow);
+  transition:transform .35s cubic-bezier(.2,.8,.3,1), box-shadow .35s;
+}
+.row:hover{ transform:translateY(-3px); box-shadow:0 26px 56px -26px rgba(35,38,43,.45); }
+@media (min-width:760px){ .row{ grid-template-columns:200px 1fr auto; padding:20px; gap:28px; } }
+
+.row-photo{ border-radius:var(--r-md); overflow:hidden; aspect-ratio:16/10; background:var(--sand); }
+@media (min-width:760px){ .row-photo{ aspect-ratio:4/3; } }
+.row-photo img{ width:100%; height:100%; object-fit:cover; }
+
+.row-title{ font-size:24px; margin-bottom:7px; text-transform:uppercase; }
+.row-text{ color:var(--slate); font-size:15px; margin:0; }
+.row-num{
+  font-family:"Oswald",sans-serif;
+  font-size:54px; line-height:1; font-weight:600;
+  color:rgba(35,38,43,.13);
+  padding-right:6px;
+}
+@media (max-width:759px){ .row-num{ display:none; } }
+
+/* ============================================================
+   КАЛЬКУЛЯТОР
+   ============================================================ */
+.calc{
+  display:grid; gap:0;
+  border-radius:var(--r-xl);
+  overflow:hidden;
+  border:1px solid var(--glass-line);
+  box-shadow:0 26px 60px -30px rgba(35,38,43,.5);
+}
+@media (min-width:960px){ .calc{ grid-template-columns:1.16fr .84fr; } }
+
+.calc-form{
+  padding:28px 22px 30px;
+  background:var(--glass-strong);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+}
+@media (min-width:960px){ .calc-form{ padding:40px 38px; } }
+
+.calc-block{ margin-bottom:24px; }
+.calc-block:last-child{ margin-bottom:0; }
+.calc-label{
+  display:block;
+  font-size:11.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ochre-deep); margin-bottom:11px;
+}
+
+.area-row{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+.area-input{
+  position:relative; flex:1 1 150px; min-width:140px;
+}
+.area-input input{
+  width:100%;
+  padding:14px 52px 14px 16px;
+  font-family:"Oswald",sans-serif; font-size:22px; font-weight:500; color:var(--graphite);
+  border-radius:var(--r-sm);
+  background:#fff;
+  border:1px solid rgba(35,38,43,.16);
+  outline:none;
+  transition:border-color .25s, box-shadow .25s;
+}
+.area-input input:focus{ border-color:var(--ochre); box-shadow:0 0 0 4px rgba(194,118,43,.16); }
+.area-input span{
+  position:absolute; right:16px; top:50%; transform:translateY(-50%);
+  font-size:13px; color:var(--slate-soft); pointer-events:none;
+}
+.area-quick{ display:flex; gap:7px; flex-wrap:wrap; }
+.area-quick button{
+  padding:10px 15px;
+  border-radius:var(--r-sm);
+  font-size:13px; font-weight:600; color:var(--slate);
+  background:rgba(255,255,255,.7);
+  border:1px solid rgba(35,38,43,.13);
+  transition:background .2s, color .2s, border-color .2s;
+}
+.area-quick button:hover{ background:#fff; color:var(--graphite); }
+
+.opts{ display:grid; gap:9px; }
+@media (min-width:560px){ .opts{ grid-template-columns:1fr 1fr; } }
+.opts.opts-3{ grid-template-columns:1fr; }
+@media (min-width:560px){ .opts.opts-3{ grid-template-columns:repeat(3,1fr); } }
+
+.opt{ position:relative; display:block; }
+.opt input{ position:absolute; opacity:0; width:0; height:0; }
+.opt span{
+  display:flex; flex-direction:column; gap:2px;
+  padding:13px 15px;
+  border-radius:var(--r-sm);
+  background:rgba(255,255,255,.66);
+  border:1px solid rgba(35,38,43,.13);
+  font-size:14px; font-weight:600;
+  cursor:pointer;
+  transition:border-color .2s, background .2s, box-shadow .2s;
+}
+.opt span small{ font-size:11.5px; font-weight:500; color:var(--slate-soft); letter-spacing:.01em; }
+.opt span:hover{ background:#fff; }
+.opt input:checked + span{
+  background:#fff;
+  border-color:var(--ochre);
+  box-shadow:0 0 0 3px rgba(194,118,43,.16);
+}
+.opt input:focus-visible + span{ outline:2px solid var(--ochre-deep); outline-offset:2px; }
+
+.adds{ display:grid; gap:9px; }
+.add{ display:flex; align-items:flex-start; gap:11px; cursor:pointer; }
+.add input{ position:absolute; opacity:0; width:0; height:0; }
+.add-box{
+  width:22px; height:22px; flex:none; margin-top:2px;
+  border-radius:6px;
+  background:rgba(255,255,255,.8);
+  border:1px solid rgba(35,38,43,.2);
+  display:grid; place-items:center;
+  transition:background .2s, border-color .2s;
+}
+.add-box::after{
+  content:""; width:10px; height:6px;
+  border-left:2px solid #fff; border-bottom:2px solid #fff;
+  transform:rotate(-45deg) scale(.4); opacity:0;
+  transition:transform .2s, opacity .2s;
+}
+.add input:checked + .add-box{ background:var(--ochre-deep); border-color:var(--ochre-deep); }
+.add input:checked + .add-box::after{ transform:rotate(-45deg) scale(1); opacity:1; }
+.add-t{ font-size:14.5px; line-height:1.4; }
+.add-t small{ display:block; font-size:12px; color:var(--slate-soft); }
+
+.calc-out{
+  position:relative;
+  padding:30px 22px 28px;
+  color:#fff;
+  background:
+    linear-gradient(165deg, rgba(46,50,58,.96) 0%, rgba(24,27,31,.97) 100%);
+}
+@media (min-width:960px){ .calc-out{ padding:40px 36px; display:flex; flex-direction:column; } }
+.calc-out::before{
+  content:""; position:absolute; inset:0; opacity:.16; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px);
+  background-size:54px 27px;
+  background-position:0 0;
+  -webkit-mask-image:radial-gradient(70% 60% at 70% 12%, #000, transparent 76%);
+  mask-image:radial-gradient(70% 60% at 70% 12%, #000, transparent 76%);
+}
+.calc-out > *{ position:relative; }
+
+.calc-out-t{
+  font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+  color:rgba(255,255,255,.55); font-weight:700; margin:0 0 14px;
+}
+.calc-sum{
+  font-family:"Oswald",sans-serif;
+  font-size:clamp(27px,5.4vw,39px); font-weight:500; line-height:1.08;
+  letter-spacing:.005em;
+}
+.calc-sum small{ display:block; font-family:"Manrope",sans-serif; font-size:13px; font-weight:500; color:rgba(255,255,255,.6); margin-top:8px; letter-spacing:0; }
+
+.calc-lines{ list-style:none; margin:24px 0 0; padding:20px 0 0; border-top:1px solid rgba(255,255,255,.14); display:grid; gap:11px; }
+.calc-lines li{ display:flex; justify-content:space-between; gap:14px; font-size:14px; color:rgba(255,255,255,.72); }
+.calc-lines b{ color:#fff; font-weight:600; white-space:nowrap; }
+.calc-lines li.is-off{ display:none; }
+
+.calc-note{ margin:22px 0 0; font-size:12.5px; line-height:1.5; color:rgba(255,255,255,.5); }
+.calc-out .btn{ width:100%; margin-top:22px; }
+@media (min-width:960px){ .calc-out .btn{ margin-top:auto; } }
+
+/* ============================================================
+   ПИРОГ ОСНОВАНИЯ
+   ============================================================ */
+.pie-grid{ display:grid; gap:26px; align-items:center; }
+@media (min-width:960px){ .pie-grid{ grid-template-columns:1.04fr .96fr; gap:46px; } }
+
+.pie-card{
+  padding:22px 18px;
+  border-radius:var(--r-xl);
+  background:var(--glass-strong);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--glass-line);
+  box-shadow:var(--glass-shadow);
+}
+@media (min-width:600px){ .pie-card{ padding:28px 26px; } }
+.pie-card svg{ width:100%; height:auto; display:block; }
+
+.pie-list{ list-style:none; margin:0; padding:0; display:grid; gap:13px; }
+.pie-list li{ display:flex; gap:14px; align-items:flex-start; }
+.pie-dot{
+  width:34px; height:34px; flex:none;
+  border-radius:var(--r-sm);
+  display:grid; place-items:center;
+  font-family:"Oswald",sans-serif; font-size:15px; font-weight:600; color:#fff;
+}
+.pie-list b{ display:block; font-size:15.5px; }
+.pie-list span{ font-size:14px; color:var(--slate); }
+
+.pie-warn{
+  margin-top:24px; padding:16px 18px;
+  border-radius:var(--r-md);
+  background:rgba(142,75,37,.08);
+  border:1px solid rgba(142,75,37,.2);
+  font-size:13.8px; color:var(--rust);
+}
+
+/* ============================================================
+   КАТАЛОГ ПОКРЫТИЙ
+   ============================================================ */
+.tabs{
+  display:flex; gap:7px;
+  overflow-x:auto;
+  padding:6px;
+  margin-bottom:24px;
+  border-radius:var(--r-md);
+  background:var(--glass);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--glass-line);
+  box-shadow:var(--glass-shadow);
+  scrollbar-width:none;
+}
+.tabs::-webkit-scrollbar{ display:none; }
+
+.tab{
+  flex:1 0 auto;
+  padding:13px 20px;
+  border-radius:var(--r-sm);
+  font-size:13.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--slate);
+  white-space:nowrap;
+  transition:color .25s, background .3s, box-shadow .3s;
+}
+.tab:hover{ color:var(--graphite); }
+.tab[aria-selected="true"]{
+  color:#fff;
+  background:var(--graphite);
+  box-shadow:0 10px 22px -14px rgba(35,38,43,.9);
+}
+
+.panel{ display:none; }
+.panel.is-on{ display:block; animation:fadeUp .45s cubic-bezier(.2,.8,.3,1) both; }
+@keyframes fadeUp{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:none; } }
+
+.panel-card{
+  display:grid; gap:0;
+  border-radius:var(--r-xl);
+  overflow:hidden;
+  background:var(--glass);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--glass-line);
+  box-shadow:var(--glass-shadow);
+}
+@media (min-width:860px){ .panel-card{ grid-template-columns:1fr 1fr; } }
+
+.panel-photo{ position:relative; aspect-ratio:4/3; background:var(--sand); }
+@media (min-width:860px){ .panel-photo{ aspect-ratio:auto; min-height:440px; } }
+.panel-photo img{ width:100%; height:100%; object-fit:cover; }
+
+.panel-body{ padding:26px 22px 28px; }
+@media (min-width:860px){ .panel-body{ padding:40px 38px; align-self:center; } }
+
+.panel-head{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:14px; }
+.panel-name{ font-size:32px; text-transform:uppercase; }
+.panel-price{
+  font-family:"Oswald",sans-serif;
+  font-size:30px; font-weight:600; color:var(--ochre-deep);
+  white-space:nowrap;
+}
+.panel-price small{ font-size:13px; font-family:"Manrope",sans-serif; color:var(--slate-soft); font-weight:500; }
+
+.panel-text{ color:var(--slate); margin:0 0 20px; }
+
+.panel-specs{ list-style:none; margin:0 0 22px; padding:0; display:grid; gap:9px; }
+.panel-specs li{ display:flex; justify-content:space-between; gap:14px; font-size:14px; color:var(--slate); border-bottom:1px dashed rgba(35,38,43,.14); padding-bottom:8px; }
+.panel-specs b{ color:var(--graphite); font-weight:600; text-align:right; }
+
+.panel-props{ display:flex; flex-wrap:wrap; gap:7px; margin:0 0 24px; padding:0; list-style:none; }
+.panel-props li{
+  padding:8px 14px;
+  border-radius:var(--pill);
+  background:rgba(255,255,255,.7);
+  border:1px solid rgba(35,38,43,.1);
+  font-size:12.5px; color:var(--slate);
+}
+
+/* ============================================================
+   ЛЕНТЫ (работы, отзывы)
+   ============================================================ */
+.strip-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:24px; }
+.strip-nav{ display:none; gap:9px; flex:none; padding-bottom:6px; }
+@media (min-width:860px){ .strip-nav{ display:flex; } }
+.nav-btn{
+  width:46px; height:46px;
+  border-radius:var(--r-sm);
+  display:grid; place-items:center;
+  color:var(--graphite);
+  background:var(--glass-strong);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid rgba(35,38,43,.14);
+  box-shadow:0 10px 24px -18px rgba(35,38,43,.6);
+  transition:transform .25s, background .25s, opacity .25s;
+}
+.nav-btn:hover{ transform:translateY(-2px); background:#fff; }
+.nav-btn[disabled]{ opacity:.32; cursor:default; transform:none; }
+
+.strip{
+  display:flex; gap:14px;
+  overflow-x:auto;
+  padding:4px 0 18px;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  cursor:grab;
+}
+.strip::-webkit-scrollbar{ display:none; }
+.strip.is-drag{ cursor:grabbing; scroll-snap-type:none; }
+.strip.is-drag *{ pointer-events:none; }
+.strip-bleed{ margin-inline:calc(var(--gut) * -1); padding-inline:var(--gut); }
+
+.work{
+  position:relative; flex:none;
+  width:76vw; max-width:300px;
+  aspect-ratio:4/5;
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  scroll-snap-align:start;
+  background:var(--sand);
+  border:1px solid rgba(255,255,255,.4);
+  box-shadow:0 20px 42px -26px rgba(35,38,43,.7);
+}
+@media (min-width:640px){ .work{ width:278px; } }
+.work img{ width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.8,.3,1); }
+.work:hover img{ transform:scale(1.04); }
+.work::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(180deg, transparent 52%, rgba(24,27,31,.62) 100%);
+}
+.work-cap{
+  position:absolute; left:14px; right:14px; bottom:13px; z-index:2;
+  color:#fff;
+}
+.work-cap b{ display:block; font-family:"Oswald",sans-serif; font-size:17px; font-weight:500; letter-spacing:.02em; }
+.work-cap span{ font-size:12px; color:rgba(255,255,255,.76); }
+
+/* ============================================================
+   ЭТАПЫ
+   ============================================================ */
+.steps{ display:grid; gap:14px; }
+@media (min-width:700px){ .steps{ grid-template-columns:repeat(2,1fr); } }
+@media (min-width:1060px){ .steps{ grid-template-columns:repeat(5,1fr); gap:14px; } }
+
+.step{
+  position:relative;
+  padding:24px 20px 22px;
+  border-radius:var(--r-lg);
+  background:var(--glass);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--glass-line);
+  box-shadow:var(--glass-shadow);
+  transition:transform .35s cubic-bezier(.2,.8,.3,1);
+}
+.step:hover{ transform:translateY(-4px); }
+.step-n{
+  width:42px; height:42px;
+  display:grid; place-items:center;
+  margin-bottom:15px;
+  border-radius:var(--r-sm);
+  font-family:"Oswald",sans-serif; font-size:19px; font-weight:600;
+  color:#fff;
+  background:linear-gradient(135deg,var(--ochre),var(--ochre-deep));
+}
+.step h3{ font-size:20px; margin-bottom:8px; text-transform:uppercase; }
+.step p{ margin:0; font-size:14px; color:var(--slate); }
+.step-time{
+  display:inline-block; margin-top:13px;
+  font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ochre-deep); font-weight:700;
+}
+
+/* ============================================================
+   ОТЗЫВЫ
+   ============================================================ */
+.review{
+  flex:none;
+  width:82vw; max-width:346px;
+  display:flex; flex-direction:column;
+  padding:24px 22px 22px;
+  border-radius:var(--r-lg);
+  scroll-snap-align:start;
+  background:var(--glass);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--glass-line);
+  box-shadow:var(--glass-shadow);
+}
+@media (min-width:640px){ .review{ width:336px; } }
+
+.review-top{ display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.ava{
+  width:46px; height:46px; flex:none;
+  border-radius:var(--r-sm);
+  display:grid; place-items:center;
+  font-family:"Oswald",sans-serif; font-size:19px; font-weight:600; color:#fff;
+  background:linear-gradient(135deg,var(--slate),var(--graphite));
+}
+.review-name{ font-weight:700; font-size:15px; line-height:1.25; }
+.review-meta{ font-size:12px; color:var(--slate-soft); }
+.stars{ color:var(--ochre); font-size:12.5px; letter-spacing:.12em; margin-top:2px; }
+
+.review-text{
+  margin:0; font-size:14.4px; color:var(--slate);
+  display:-webkit-box; -webkit-line-clamp:6; line-clamp:6;
+  -webkit-box-orient:vertical; overflow:hidden;
+}
+.review-more{
+  align-self:flex-start;
+  margin-top:14px; padding:9px 16px;
+  border-radius:var(--r-sm);
+  font-size:12.5px; font-weight:700; color:var(--ochre-deep);
+  background:rgba(255,255,255,.7);
+  border:1px solid rgba(35,38,43,.12);
+  transition:background .25s, transform .25s;
+}
+.review-more:hover{ background:#fff; transform:translateY(-1px); }
+
+/* ============================================================
+   БРИГАДА
+   ============================================================ */
+.crew-grid{ display:grid; gap:26px; align-items:center; }
+@media (min-width:900px){ .crew-grid{ grid-template-columns:.84fr 1.16fr; gap:48px; } }
+
+.crew-photo{
+  position:relative;
+  border-radius:var(--r-xl);
+  overflow:hidden;
+  aspect-ratio:4/5;
+  border:1px solid rgba(255,255,255,.5);
+  box-shadow:0 34px 66px -38px rgba(35,38,43,.66);
+  background:var(--sand);
+}
+.crew-photo img{ width:100%; height:100%; object-fit:cover; object-position:50% 22%; }
+
+.crew-sign{ font-family:"Oswald",sans-serif; font-size:24px; color:var(--ochre-deep); margin:22px 0 4px; text-transform:uppercase; }
+.crew-role{ font-size:13px; color:var(--slate-soft); margin:0 0 24px; }
+
+.msgs{ display:flex; flex-wrap:wrap; gap:10px; }
+.msg{
+  display:inline-flex; align-items:center; gap:9px;
+  padding:13px 20px;
+  border-radius:var(--r-sm);
+  font-size:14px; font-weight:700; color:var(--graphite);
+  background:var(--glass-strong);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid rgba(35,38,43,.13);
+  box-shadow:0 10px 24px -18px rgba(35,38,43,.6);
+  transition:transform .25s, background .25s;
+}
+.msg:hover{ transform:translateY(-2px); background:#fff; }
+.msg svg{ width:19px; height:19px; flex:none; }
+
+/* ============================================================
+   ГЕОГРАФИЯ
+   ============================================================ */
+.geo-grid{ display:grid; gap:18px; }
+@media (min-width:900px){ .geo-grid{ grid-template-columns:1.2fr .8fr; gap:22px; } }
+
+.geo-photo{
+  border-radius:var(--r-xl);
+  overflow:hidden;
+  aspect-ratio:16/11;
+  border:1px solid rgba(255,255,255,.5);
+  box-shadow:0 30px 60px -38px rgba(35,38,43,.62);
+  background:var(--sand);
+}
+.geo-photo img{ width:100%; height:100%; object-fit:cover; }
+
+.geo-card{
+  display:flex; flex-direction:column;
+  padding:28px 24px;
+  border-radius:var(--r-xl);
+  background:var(--glass);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--glass-line);
+  box-shadow:var(--glass-shadow);
+}
+.geo-card h3{ font-size:26px; margin-bottom:16px; text-transform:uppercase; }
+
+.geo-list{ list-style:none; margin:0 0 22px; padding:0; display:grid; gap:14px; }
+.geo-list li{ display:flex; gap:12px; font-size:14.5px; color:var(--slate); }
+.geo-list b{ display:block; color:var(--graphite); font-weight:600; font-size:15px; margin-bottom:1px; }
+.geo-ic{
+  width:34px; height:34px; flex:none;
+  border-radius:var(--r-sm);
+  display:grid; place-items:center;
+  color:#fff;
+  background:linear-gradient(135deg,var(--slate),var(--graphite));
+}
+
+.geo-tags{ display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; }
+.geo-tags span{
+  padding:7px 13px;
+  border-radius:var(--pill);
+  background:rgba(255,255,255,.66);
+  border:1px solid rgba(35,38,43,.1);
+  font-size:12.5px; color:var(--slate);
+}
+
+.geo-thumbs{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:18px; }
+.geo-thumbs img{
+  width:100%; aspect-ratio:1/1; object-fit:cover;
+  border-radius:var(--r-md);
+  border:1px solid rgba(255,255,255,.55);
+}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq{ display:grid; gap:11px; max-width:880px; }
+
+.q{
+  border-radius:var(--r-md);
+  overflow:hidden;
+  background:var(--glass);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--glass-line);
+  box-shadow:0 14px 30px -26px rgba(35,38,43,.55);
+  transition:box-shadow .3s;
+}
+.q.is-open{ box-shadow:var(--glass-shadow); }
+
+.q-btn{
+  width:100%;
+  display:flex; align-items:center; justify-content:space-between; gap:18px;
+  padding:19px 20px;
+  text-align:left;
+  font-size:16px; font-weight:700; line-height:1.4;
+  transition:color .25s;
+}
+.q-btn:hover{ color:var(--ochre-deep); }
+
+.q-sign{
+  position:relative; flex:none;
+  width:28px; height:28px;
+  border-radius:8px;
+  background:rgba(255,255,255,.8);
+  border:1px solid rgba(35,38,43,.12);
+}
+.q-sign::before,.q-sign::after{
+  content:""; position:absolute; left:50%; top:50%;
+  width:11px; height:2px; border-radius:2px;
+  background:var(--ochre-deep);
+  transform:translate(-50%,-50%);
+  transition:transform .3s cubic-bezier(.2,.8,.3,1), opacity .3s;
+}
+.q-sign::after{ transform:translate(-50%,-50%) rotate(90deg); }
+.q.is-open .q-sign::after{ transform:translate(-50%,-50%) rotate(0deg); opacity:0; }
+
+.q-body{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .38s cubic-bezier(.2,.8,.3,1); }
+.q.is-open .q-body{ grid-template-rows:1fr; }
+.q-body > div{ overflow:hidden; }
+.q-body p{ margin:0; padding:0 20px 20px; font-size:14.8px; color:var(--slate); }
+
+/* ============================================================
+   ПАМЯТКА
+   ============================================================ */
+.care{
+  padding:32px 22px;
+  border-radius:var(--r-xl);
+  background:linear-gradient(140deg, rgba(255,255,255,.76) 0%, rgba(222,214,199,.6) 100%);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--glass-line);
+  box-shadow:var(--glass-shadow);
+}
+@media (min-width:860px){ .care{ padding:48px 46px; } }
+
+.care-grid{ display:grid; gap:14px; margin-top:26px; }
+@media (min-width:700px){ .care-grid{ grid-template-columns:1fr 1fr; gap:16px 30px; } }
+
+.care-item{ display:flex; gap:14px; }
+.care-ic{
+  width:34px; height:34px; flex:none;
+  border-radius:var(--r-sm);
+  display:grid; place-items:center;
+  font-family:"Oswald",sans-serif; font-size:13px; font-weight:600;
+  color:#fff;
+  background:linear-gradient(135deg,var(--slate),var(--graphite));
+}
+.care-item b{ display:block; font-size:15px; margin-bottom:2px; }
+.care-item span{ font-size:14px; color:var(--slate); }
+
+.care-note{
+  margin:24px 0 0; padding:16px 18px;
+  border-radius:var(--r-md);
+  background:rgba(255,255,255,.6);
+  border:1px solid rgba(255,255,255,.85);
+  font-size:13.5px; color:var(--slate);
+}
+
+/* ============================================================
+   ПОДВАЛ
+   ============================================================ */
+.footer{
+  margin-top:24px;
+  padding:54px 0 32px;
+  color:rgba(255,255,255,.72);
+  background:var(--graphite);
+}
+.footer h3,.footer b,.footer .foot-phone{ color:#fff; }
+
+.promo{
+  position:relative;
+  padding:30px 24px;
+  margin-bottom:44px;
+  border-radius:var(--r-xl);
+  overflow:hidden;
+  display:grid; gap:20px; align-items:center;
+  background:linear-gradient(140deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.04) 100%);
+  border:1px solid rgba(255,255,255,.14);
+}
+@media (min-width:820px){ .promo{ grid-template-columns:1fr auto; padding:40px 44px; } }
+.promo h3{ font-size:clamp(24px,5vw,34px); margin-bottom:10px; text-transform:uppercase; }
+.promo p{ margin:0; max-width:56ch; font-size:15px; color:rgba(255,255,255,.66); }
+.promo-badge{
+  position:absolute; right:-40px; top:-40px;
+  width:180px; height:180px; border-radius:50%;
+  background:radial-gradient(circle at 36% 36%, rgba(194,118,43,.4), transparent 68%);
+  pointer-events:none;
+}
+
+.foot-grid{ display:grid; gap:32px; }
+@media (min-width:820px){ .foot-grid{ grid-template-columns:1.2fr 1fr 1fr; gap:40px; } }
+
+.foot-t{
+  font-size:11.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--ochre); font-weight:700;
+  margin:0 0 15px;
+}
+.foot-list{ list-style:none; margin:0; padding:0; display:grid; gap:10px; font-size:14.5px; }
+.foot-list a{ transition:color .25s; }
+.foot-list a:hover{ color:var(--ochre); }
+.foot-phone{
+  font-family:"Oswald",sans-serif;
+  font-size:28px; font-weight:500; letter-spacing:.02em;
+  display:inline-block; margin-bottom:6px;
+}
+
+.socials{ display:flex; gap:10px; margin-top:18px; }
+.soc{
+  width:44px; height:44px;
+  border-radius:var(--r-sm);
+  display:grid; place-items:center;
+  color:#fff;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  transition:transform .25s, background .25s;
+}
+.soc:hover{ transform:translateY(-2px); background:rgba(255,255,255,.16); }
+.soc svg{ width:20px; height:20px; }
+
+.copy{
+  margin-top:38px; padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.12);
+  display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:space-between;
+  font-size:12.5px; color:rgba(255,255,255,.44);
+}
+
+/* ============================================================
+   МОДАЛЬНЫЕ ОКНА
+   ============================================================ */
+.overlay{
+  position:fixed; inset:0; z-index:200;
+  display:flex; align-items:flex-end; justify-content:center;
+  background:rgba(24,27,31,.5);
+  -webkit-backdrop-filter:blur(6px);
+  backdrop-filter:blur(6px);
+  opacity:0; visibility:hidden;
+  transition:opacity .3s ease, visibility .3s;
+}
+.overlay.is-open{ opacity:1; visibility:visible; }
+@media (min-width:700px){ .overlay{ align-items:center; padding:24px; } }
+
+.modal{
+  position:relative;
+  width:100%; max-width:520px;
+  max-height:92vh; overflow-y:auto;
+  padding:30px 22px 26px;
+  border-radius:var(--r-xl) var(--r-xl) 0 0;
+  background:rgba(244,242,238,.96);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--glass-line);
+  box-shadow:0 -20px 56px -24px rgba(35,38,43,.7);
+  transform:translateY(28px);
+  transition:transform .38s cubic-bezier(.2,.8,.3,1);
+}
+.overlay.is-open .modal{ transform:none; }
+@media (min-width:700px){
+  .modal{ border-radius:var(--r-xl); padding:38px 36px 32px; transform:translateY(16px) scale(.98); }
+  .overlay.is-open .modal{ transform:none; }
+}
+
+.modal-close{
+  position:absolute; right:16px; top:16px;
+  width:38px; height:38px;
+  border-radius:var(--r-sm);
+  display:grid; place-items:center;
+  color:var(--graphite);
+  background:rgba(255,255,255,.76);
+  border:1px solid rgba(35,38,43,.12);
+  transition:background .25s, transform .25s;
+}
+.modal-close:hover{ background:#fff; transform:rotate(90deg); }
+
+.modal h3{ font-size:30px; margin-bottom:8px; padding-right:40px; text-transform:uppercase; }
+.modal-sub{ color:var(--slate); font-size:14.5px; margin:0 0 22px; }
+
+.field{ margin-bottom:13px; }
+.field label{
+  display:block; font-size:11.5px; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ochre-deep); margin-bottom:7px;
+}
+.field input,.field select,.field textarea{
+  width:100%;
+  padding:14px 16px;
+  font-family:inherit; font-size:15px; color:var(--graphite);
+  border-radius:var(--r-sm);
+  background:rgba(255,255,255,.82);
+  border:1px solid rgba(35,38,43,.16);
+  outline:none;
+  transition:border-color .25s, box-shadow .25s, background .25s;
+}
+.field textarea{ resize:vertical; min-height:84px; }
+.field select{
+  appearance:none; -webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A6069' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 15px center; background-size:17px;
+  padding-right:44px;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  background:#fff; border-color:var(--ochre);
+  box-shadow:0 0 0 4px rgba(194,118,43,.15);
+}
+.field.has-error input{ border-color:#C2564B; box-shadow:0 0 0 4px rgba(194,86,75,.13); }
+.field-err{ display:none; margin-top:6px; font-size:12.5px; color:#B24C42; }
+.field.has-error .field-err{ display:block; }
+
+.form-row{ display:grid; gap:13px; }
+@media (min-width:520px){ .form-row{ grid-template-columns:1fr 1fr; } }
+
+.form-note{ margin:16px 0 0; font-size:11.8px; color:var(--slate-soft); line-height:1.5; text-align:center; }
+
+.modal .btn-primary{ width:100%; margin-top:8px; }
+.btn[disabled]{ opacity:.6; cursor:default; transform:none; }
+
+.done{ text-align:center; padding:14px 0 6px; }
+.done-ic{
+  width:68px; height:68px; margin:0 auto 20px;
+  border-radius:var(--r-md);
+  display:grid; place-items:center;
+  color:#fff;
+  background:linear-gradient(135deg,var(--ochre),var(--ochre-deep));
+}
+.done h3{ padding:0; }
+.done p{ color:var(--slate); font-size:15px; margin:10px 0 24px; }
+
+.modal-review .review-top{ margin-bottom:18px; }
+.modal-review .modal-text{ font-size:15px; color:var(--slate); margin:0; white-space:pre-line; }
+
+/* нижняя кнопка на телефоне */
+.dock{
+  position:fixed; left:0; right:0; bottom:0; z-index:80;
+  display:flex; gap:9px;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(242,240,236,.88);
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border-top:1px solid rgba(35,38,43,.12);
+  transform:translateY(120%);
+  transition:transform .35s cubic-bezier(.2,.8,.3,1);
+}
+.dock.is-on{ transform:none; }
+.dock .btn{ flex:1; padding:15px 14px; font-size:13px; }
+.dock .btn-ghost{ flex:0 0 auto; padding:15px 18px; }
+@media (min-width:860px){ .dock{ display:none; } }
+body.has-dock{ padding-bottom:82px; }
+@media (min-width:860px){ body.has-dock{ padding-bottom:0; } }
+
+body.is-locked{ overflow:hidden; }
+</style>
+</head>
+
+<body>
+
+<!-- ======================= ШАПКА ======================= -->
+<header class="header" id="header">
+  <div class="wrap header-in">
+    <a href="#top" class="logo" aria-label="Каменный Двор — на главную">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="46" height="46" rx="9" stroke="#23262B" stroke-opacity=".22"/>
+        <g fill="#C2762B">
+          <rect x="9"  y="12" width="13" height="10" rx="2"/>
+          <rect x="26" y="12" width="13" height="10" rx="2"/>
+          <rect x="9"  y="26" width="13" height="10" rx="2"/>
+          <rect x="26" y="26" width="13" height="10" rx="2"/>
+        </g>
+      </svg>
+      <span class="logo-text">
+        <span class="logo-name">Каменный двор</span>
+        <span class="logo-sub">мощение и благоустройство</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Разделы сайта">
+      <a href="#calc">Расчёт</a>
+      <a href="#materials">Покрытия</a>
+      <a href="#works">Работы</a>
+      <a href="#how">Этапы</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+
+    <span class="head-phone">
+      <b><a href="tel:+79000000000">+7 900 000-00-00</a></b>
+      <span>Пн–Сб 8:00–20:00</span>
+    </span>
+
+    <button class="btn btn-primary" data-book="шапка">
+      <span class="btn-full">Бесплатный замер</span><span class="btn-short">Замер</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ======================= ГЛАВНЫЙ ЭКРАН ======================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Москва и область · с 2014 года</span>
+      <h1>Двор, который<br>переживёт машину<br>и <em>десять зим</em></h1>
+      <p class="hero-sub">
+        Укладываем брусчатку и тротуарную плитку под ключ: от вскрытия грунта
+        до последнего шва. Основание считаем под нагрузку, а не «как обычно»,
+        водоотвод закладываем сразу — поэтому дорожки не гуляют и не проседают.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="#calc">Рассчитать стоимость</a>
+        <a class="btn btn-ghost btn-lg" href="#works">Смотреть работы</a>
+      </div>
+
+      <div class="hero-facts">
+        <span class="fact"><b>12</b> лет на мощении</span>
+        <span class="fact"><b>340+</b> объектов</span>
+        <span class="fact"><b>5 лет</b> гарантии по договору</span>
+      </div>
+    </div>
+
+    <div class="hero-media reveal">
+      <div class="hero-photo">
+        <img src="assets/img/hero.webp" alt="Загородный дом с двором, вымощенным брусчаткой" width="1400" height="934" fetchpriority="high">
+      </div>
+      <div class="hero-chip">
+        <span class="hero-chip-ic" aria-hidden="true">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/>
+          </svg>
+        </span>
+        <span class="hero-chip-t">
+          <b>Просадка — наш ремонт</b>
+          переложим за свой счёт, это в договоре
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ТРИ ПРИЧИНЫ ======================= -->
+<section id="why">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Почему у нас не проседает</span>
+      <h2 class="h-sec">Брусчатку видно сверху.<br>Ломается — снизу</h2>
+      <p class="sub-sec">
+        Девять из десяти переделок, на которые нас зовут, — это не плохой камень.
+        Это тонкое основание, забытый водоотвод и бордюр, поставленный «на глазок».
+        Вот что мы делаем иначе.
+      </p>
+    </div>
+
+    <div class="rows">
+      <article class="row reveal">
+        <div class="row-photo"><img src="assets/img/feature-base.webp" alt="Щебёночное основание под мощение" loading="lazy" width="1400" height="1866"></div>
+        <div>
+          <h3 class="row-title">Основание под нагрузку</h3>
+          <p class="row-text">
+            Под пешеходную дорожку и под заезд грузовика нужны разные пироги — 20 и 40 сантиметров щебня.
+            Мы считаем толщину по тому, что будет ездить, и трамбуем послойно, по 10–15 см,
+            виброплитой с проходом в двух направлениях. Геотекстиль кладём всегда: он не даёт
+            щебню уйти в грунт, а грунту — подняться вверх.
+          </p>
+        </div>
+        <div class="row-num">01</div>
+      </article>
+
+      <article class="row reveal">
+        <div class="row-photo"><img src="assets/img/feature-lay.webp" alt="Мастер укладывает брусчатку" loading="lazy" width="1400" height="2100"></div>
+        <div>
+          <h3 class="row-title">Уклоны и вода</h3>
+          <p class="row-text">
+            Ровная площадка — это ошибка, а не аккуратность. Делаем уклон 5–10 мм на метр
+            от дома и от входа, ставим дождеприёмники и лотки там, где вода реально собирается.
+            Проверяем не нивелиром на бумаге, а ведром воды перед сдачей: всё должно уйти за минуту.
+          </p>
+        </div>
+        <div class="row-num">02</div>
+      </article>
+
+      <article class="row reveal">
+        <div class="row-photo"><img src="assets/img/feature-patt.webp" alt="Уложенная брусчатка с ровными швами" loading="lazy" width="1400" height="928"></div>
+        <div>
+          <h3 class="row-title">Бордюр и швы</h3>
+          <p class="row-text">
+            Бордюр ставим на бетонное ложе с упором — без него любая кладка через два сезона
+            «расползается» по краям. Швы 3–5 мм заполняем просеянным песком или полимерной смесью,
+            проливаем и досыпаем повторно через неделю: усадка есть всегда, и её лучше закрыть нам, чем вам.
+          </p>
+        </div>
+        <div class="row-num">03</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= КАЛЬКУЛЯТОР ======================= -->
+<section id="calc">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Расчёт стоимости</span>
+      <h2 class="h-sec">Посчитайте двор<br>за одну минуту</h2>
+      <p class="sub-sec">
+        Считаем «под ключ»: материал, основание, работа. Цифра ниже — рабочая вилка,
+        по ней уже можно планировать бюджет. Точную смету с объёмами привозим после замера — бесплатно.
+      </p>
+    </div>
+
+    <div class="calc reveal">
+      <div class="calc-form">
+        <div class="calc-block">
+          <label class="calc-label" for="c-area">Площадь мощения</label>
+          <div class="area-row">
+            <span class="area-input">
+              <input id="c-area" type="number" min="5" max="3000" step="1" value="80" inputmode="numeric">
+              <span>м²</span>
+            </span>
+            <span class="area-quick">
+              <button type="button" data-area="30">30</button>
+              <button type="button" data-area="60">60</button>
+              <button type="button" data-area="120">120</button>
+              <button type="button" data-area="250">250</button>
+            </span>
+          </div>
+        </div>
+
+        <div class="calc-block">
+          <span class="calc-label">Покрытие</span>
+          <div class="opts">
+            <label class="opt">
+              <input type="radio" name="cover" value="vibro" data-price="1180" data-name="Вибропрессованная 60 мм" checked>
+              <span>Вибропрессованная<small>60 мм · от 1 180 ₽/м²</small></span>
+            </label>
+            <label class="opt">
+              <input type="radio" name="cover" value="wave" data-price="1320" data-name="«Волна» / «Катушка» 60 мм">
+              <span>«Волна», «Катушка»<small>60 мм · от 1 320 ₽/м²</small></span>
+            </label>
+            <label class="opt">
+              <input type="radio" name="cover" value="oldtown" data-price="1640" data-name="«Старый город»">
+              <span>«Старый город»<small>60 мм · от 1 640 ₽/м²</small></span>
+            </label>
+            <label class="opt">
+              <input type="radio" name="cover" value="klinker" data-price="2450" data-name="Клинкерная брусчатка">
+              <span>Клинкер<small>52 мм · от 2 450 ₽/м²</small></span>
+            </label>
+            <label class="opt">
+              <input type="radio" name="cover" value="granite" data-price="3100" data-name="Гранитная колотая">
+              <span>Гранит колотый<small>100×100 · от 3 100 ₽/м²</small></span>
+            </label>
+            <label class="opt">
+              <input type="radio" name="cover" value="slab" data-price="1450" data-name="Плита большого формата">
+              <span>Плита 40×40, 60×30<small>от 1 450 ₽/м²</small></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="calc-block">
+          <span class="calc-label">Что будет сверху</span>
+          <div class="opts opts-3">
+            <label class="opt">
+              <input type="radio" name="load" value="foot" data-k="1" data-base="620" data-name="Пешеходная зона" checked>
+              <span>Люди<small>щебень 15 см</small></span>
+            </label>
+            <label class="opt">
+              <input type="radio" name="load" value="car" data-k="1.14" data-base="980" data-name="Легковой автомобиль">
+              <span>Легковая машина<small>щебень 25 см</small></span>
+            </label>
+            <label class="opt">
+              <input type="radio" name="load" value="truck" data-k="1.3" data-base="1390" data-name="Грузовой транспорт">
+              <span>Грузовик<small>щебень 40 см</small></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="calc-block">
+          <span class="calc-label">Что ещё нужно</span>
+          <div class="adds">
+            <label class="add">
+              <input type="checkbox" id="a-curb" data-name="Бордюр по периметру" checked>
+              <span class="add-box" aria-hidden="true"></span>
+              <span class="add-t">Бордюр по периметру<small>на бетонное ложе, 760 ₽ за погонный метр</small></span>
+            </label>
+            <label class="add">
+              <input type="checkbox" id="a-drain" data-name="Ливневые лотки и дождеприёмники">
+              <span class="add-box" aria-hidden="true"></span>
+              <span class="add-t">Ливневые лотки и дождеприёмники<small>+210 ₽/м² к площади мощения</small></span>
+            </label>
+            <label class="add">
+              <input type="checkbox" id="a-demo" data-name="Демонтаж старого покрытия">
+              <span class="add-box" aria-hidden="true"></span>
+              <span class="add-t">Демонтаж старого покрытия<small>+390 ₽/м², вывоз мусора включён</small></span>
+            </label>
+            <label class="add">
+              <input type="checkbox" id="a-heat" data-name="Подогрев площадки">
+              <span class="add-box" aria-hidden="true"></span>
+              <span class="add-t">Подогрев площадки<small>греющий кабель под въезд, +2 900 ₽/м²</small></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-out">
+        <p class="calc-out-t">Ориентировочно под ключ</p>
+        <div class="calc-sum" id="c-sum">— ₽
+          <small id="c-per">Укажите площадь, чтобы увидеть расчёт</small>
+        </div>
+
+        <ul class="calc-lines" id="c-lines">
+          <li data-line="base"><span>Земляные работы и основание</span><b>—</b></li>
+          <li data-line="cover"><span>Материал и укладка</span><b>—</b></li>
+          <li data-line="curb"><span>Бордюр по периметру</span><b>—</b></li>
+          <li data-line="drain"><span>Водоотвод</span><b>—</b></li>
+          <li data-line="demo"><span>Демонтаж и вывоз</span><b>—</b></li>
+          <li data-line="heat"><span>Подогрев</span><b>—</b></li>
+        </ul>
+
+        <p class="calc-note">
+          Вилка ±8% — на геометрию участка и подъезд техники. Смета после замера фиксируется
+          в договоре и в процессе не растёт: объёмы и цены приложением к нему.
+        </p>
+
+        <button class="btn btn-primary btn-lg" data-book="калькулятор" id="c-send">Отправить расчёт мастеру</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ПИРОГ ОСНОВАНИЯ ======================= -->
+<section id="pie">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Что под камнем</span>
+      <h2 class="h-sec">Пирог основания<br>в разрезе</h2>
+      <p class="sub-sec">
+        Так выглядит правильный заезд под легковую машину. Каждый слой делает свою работу,
+        и выкинуть можно только один — тот, за который потом платят дважды.
+      </p>
+    </div>
+
+    <div class="pie-grid">
+      <div class="pie-card reveal">
+        <svg viewBox="0 0 560 440" role="img" aria-label="Разрез пирога основания под брусчатку: грунт, геотекстиль, щебень, цементно-песчаная смесь, брусчатка, бордюр">
+          <defs>
+            <linearGradient id="g-soil" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#6B5B4B"/><stop offset="1" stop-color="#584A3D"/>
+            </linearGradient>
+            <linearGradient id="g-sand" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#D9C9A6"/><stop offset="1" stop-color="#C6B28A"/>
+            </linearGradient>
+            <linearGradient id="g-crush" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#9AA0A6"/><stop offset="1" stop-color="#7E858C"/>
+            </linearGradient>
+            <linearGradient id="g-cps" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#C8C4BC"/><stop offset="1" stop-color="#B4AFA5"/>
+            </linearGradient>
+            <linearGradient id="g-stone" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#8E8579"/><stop offset="1" stop-color="#6F675C"/>
+            </linearGradient>
+            <pattern id="p-crush" width="22" height="16" patternUnits="userSpaceOnUse">
+              <circle cx="4"  cy="5"  r="2.6" fill="#6E747A" opacity=".55"/>
+              <circle cx="14" cy="11" r="3.2" fill="#666C72" opacity=".5"/>
+              <circle cx="19" cy="3"  r="2.1" fill="#737A80" opacity=".5"/>
+              <circle cx="9"  cy="13" r="1.8" fill="#7C838A" opacity=".45"/>
+            </pattern>
+          </defs>
+
+          <!-- уплотнённый грунт -->
+          <path d="M30 334 H430 V398 H30 Z" fill="url(#g-soil)"/>
+          <g fill="#7D6C59" opacity=".5">
+            <circle cx="80"  cy="356" r="3"/><circle cx="150" cy="378" r="2.4"/>
+            <circle cx="230" cy="350" r="2.8"/><circle cx="310" cy="376" r="2.2"/>
+            <circle cx="390" cy="360" r="3.1"/>
+          </g>
+
+          <!-- песчаная подушка -->
+          <path d="M30 284 H430 V334 H30 Z" fill="url(#g-sand)"/>
+
+          <!-- геотекстиль -->
+          <path d="M30 281 H430" stroke="#3E4650" stroke-width="4" stroke-dasharray="10 6"/>
+
+          <!-- щебень -->
+          <path d="M30 176 H430 V279 H30 Z" fill="url(#g-crush)"/>
+          <path d="M30 176 H430 V279 H30 Z" fill="url(#p-crush)"/>
+
+          <!-- цементно-песчаная смесь -->
+          <path d="M30 146 H430 V176 H30 Z" fill="url(#g-cps)"/>
+
+          <!-- брусчатка -->
+          <g>
+            <path d="M30 100 H430 V146 H30 Z" fill="url(#g-stone)"/>
+            <g stroke="#F2F0EC" stroke-width="2.4" opacity=".85">
+              <path d="M74 100 V146"/><path d="M118 100 V146"/><path d="M162 100 V146"/>
+              <path d="M206 100 V146"/><path d="M250 100 V146"/><path d="M294 100 V146"/>
+              <path d="M338 100 V146"/><path d="M382 100 V146"/>
+            </g>
+            <path d="M30 100 H430" stroke="#5E564C" stroke-width="2"/>
+          </g>
+
+          <!-- бордюр на бетонном ложе -->
+          <path d="M430 84 H466 V334 H430 Z" fill="#AEA79C" stroke="#7E766B" stroke-width="2"/>
+          <path d="M420 334 H480 V366 H420 Z" fill="#9A9DA1" stroke="#7E766B" stroke-width="1.6"/>
+          <text x="448" y="72" font-family="Manrope, sans-serif" font-size="13" font-weight="700" fill="#5A6069" text-anchor="middle">бордюр</text>
+          <text x="450" y="386" font-family="Manrope, sans-serif" font-size="11.5" fill="#5A6069" text-anchor="middle">бетон</text>
+
+          <!-- уклон -->
+          <g stroke="#C2762B" stroke-width="2.4" fill="none" stroke-linecap="round">
+            <path d="M40 76 H250"/>
+            <path d="M242 69 l9 7 -9 7"/>
+          </g>
+          <text x="40" y="58" font-family="Manrope, sans-serif" font-size="13.5" font-weight="700" fill="#A35F1A">уклон 5–10 мм на метр</text>
+
+          <!-- номера слоёв: те же, что в списке справа -->
+          <g font-family="Oswald, sans-serif" font-size="15" font-weight="600" fill="#fff" text-anchor="middle">
+            <circle cx="66" cy="123" r="13" fill="#23262B" opacity=".82"/><text x="66" y="128">1</text>
+            <circle cx="66" cy="161" r="13" fill="#23262B" opacity=".82"/><text x="66" y="166">2</text>
+            <circle cx="66" cy="228" r="13" fill="#23262B" opacity=".82"/><text x="66" y="233">3</text>
+            <circle cx="66" cy="281" r="13" fill="#3E4650"/><text x="66" y="286">4</text>
+            <circle cx="66" cy="313" r="13" fill="#23262B" opacity=".82"/><text x="66" y="318">5</text>
+            <circle cx="66" cy="366" r="13" fill="#23262B" opacity=".82"/><text x="66" y="371">6</text>
+          </g>
+
+          <!-- толщины слоёв -->
+          <g font-family="Manrope, sans-serif" font-size="13" font-weight="700" fill="#F4F2EE" text-anchor="end">
+            <text x="412" y="128">60 мм</text>
+            <text x="412" y="166" fill="#4A5058">40 мм</text>
+            <text x="412" y="233">250 мм</text>
+            <text x="412" y="318" fill="#5A4B36">100 мм</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="reveal">
+        <ul class="pie-list">
+          <li>
+            <span class="pie-dot" style="background:#6F675C">1</span>
+            <span><b>Брусчатка, 60 мм</b><span>Вибропрессованная — под машину, вибролитая — только под ноги. Кладём от угла, с подрезкой по месту, а не «как ляжет».</span></span>
+          </li>
+          <li>
+            <span class="pie-dot" style="background:#B4AFA5">2</span>
+            <span><b>Цементно-песчаная смесь, 40 мм</b><span>Сухая, 1:6. Именно в неё садится камень, и именно её толщина держит уровень на годы.</span></span>
+          </li>
+          <li>
+            <span class="pie-dot" style="background:#7E858C">3</span>
+            <span><b>Щебень 20–40, 250 мм</b><span>Несущий слой. Под заезд — 250 мм, под дорожку хватит 150. Трамбуем слоями по 10–15 см.</span></span>
+          </li>
+          <li>
+            <span class="pie-dot" style="background:#3E4650">4</span>
+            <span><b>Геотекстиль 150 г/м²</b><span>Разделяет щебень и грунт. Без него щебень «тонет», а весной наверх идёт глина.</span></span>
+          </li>
+          <li>
+            <span class="pie-dot" style="background:#C6B28A">5</span>
+            <span><b>Песчаная подушка, 100 мм</b><span>Выравнивает дно корыта и работает как дренаж — вода не стоит в основании.</span></span>
+          </li>
+          <li>
+            <span class="pie-dot" style="background:#584A3D">6</span>
+            <span><b>Уплотнённый грунт</b><span>Растительный слой снимаем полностью. Мягкий грунт под пирогом — это будущая яма.</span></span>
+          </li>
+        </ul>
+
+        <p class="pie-warn">
+          Самая частая экономия, которую мы видим: щебень заменили песком, а геотекстиль «не понадобился».
+          Первую зиму такое покрытие переживает. Вторую — уже с ямами у водостока.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= КАТАЛОГ ПОКРЫТИЙ ======================= -->
+<section id="materials">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Покрытия</span>
+      <h2 class="h-sec">Что кладём и кому<br>что подходит</h2>
+      <p class="sub-sec">
+        Цены — «под ключ» за квадратный метр: материал, основание под пешеходную нагрузку и работа.
+        Под машину основание дороже — это видно в калькуляторе выше.
+      </p>
+    </div>
+
+    <div class="reveal">
+      <div class="tabs" role="tablist" aria-label="Виды покрытий">
+        <button class="tab" role="tab" id="tab-vibro"   aria-controls="p-vibro"   aria-selected="true">Вибропрессованная</button>
+        <button class="tab" role="tab" id="tab-oldtown" aria-controls="p-oldtown" aria-selected="false">Старый город</button>
+        <button class="tab" role="tab" id="tab-klinker" aria-controls="p-klinker" aria-selected="false">Клинкер</button>
+        <button class="tab" role="tab" id="tab-granite" aria-controls="p-granite" aria-selected="false">Гранит</button>
+        <button class="tab" role="tab" id="tab-slab"    aria-controls="p-slab"    aria-selected="false">Плита</button>
+      </div>
+
+      <!-- Вибропрессованная -->
+      <div class="panel is-on" id="p-vibro" role="tabpanel" aria-labelledby="tab-vibro">
+        <div class="panel-card">
+          <div class="panel-photo"><img src="assets/img/mat-vibro.webp" alt="Вибропрессованная брусчатка серого цвета" loading="lazy" width="1400" height="1400"></div>
+          <div class="panel-body">
+            <div class="panel-head">
+              <h3 class="panel-name">Вибропрессованная</h3>
+              <span class="panel-price">от 1 180 ₽ <small>/ м² под ключ</small></span>
+            </div>
+            <p class="panel-text">
+              Рабочая лошадь мощения: плотный бетон, честные 60 мм, морозостойкость F200.
+              Держит машину, не боится реагентов и стоит дешевле всего остального в этом списке.
+              Если нужен просто хороший двор без дизайнерских задач — берут её.
+            </p>
+            <ul class="panel-specs">
+              <li><span>Толщина</span><b>60 мм (есть 80 мм под грузовик)</b></li>
+              <li><span>Морозостойкость</span><b>F200, до 200 циклов</b></li>
+              <li><span>Формат</span><b>«Кирпич» 200×100, «Квадрат» 100×100</b></li>
+            </ul>
+            <ul class="panel-props">
+              <li>Под легковую машину</li>
+              <li>Не выцветает</li>
+              <li>Ремонтопригодна по одному камню</li>
+            </ul>
+            <button class="btn btn-primary" data-book="покрытие: Вибропрессованная">Посчитать с этим покрытием</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Старый город -->
+      <div class="panel" id="p-oldtown" role="tabpanel" aria-labelledby="tab-oldtown" hidden>
+        <div class="panel-card">
+          <div class="panel-photo"><img src="assets/img/mat-oldtown.webp" alt="Мощение «Старый город» веерным рисунком" loading="lazy" width="1400" height="934"></div>
+          <div class="panel-body">
+            <div class="panel-head">
+              <h3 class="panel-name">Старый город</h3>
+              <span class="panel-price">от 1 640 ₽ <small>/ м² под ключ</small></span>
+            </div>
+            <p class="panel-text">
+              Набор из четырёх размеров с фаской и искусственно состаренным краем. Кладётся
+              с хаотичным раскладом — двор перестаёт выглядеть «плиточным» и начинает выглядеть двором.
+              Веер и круг — отсюда же, но это отдельная работа по разметке.
+            </p>
+            <ul class="panel-specs">
+              <li><span>Толщина</span><b>60 мм</b></li>
+              <li><span>Раскладка</span><b>4 размера, случайный порядок</b></li>
+              <li><span>Сложные узоры</span><b>Веер, круг — +18% к работе</b></li>
+            </ul>
+            <ul class="panel-props">
+              <li>Для участков с домом из камня и кирпича</li>
+              <li>Прощает мелкие огрехи геометрии</li>
+              <li>Хорошо стареет</li>
+            </ul>
+            <button class="btn btn-primary" data-book="покрытие: Старый город">Посчитать с этим покрытием</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Клинкер -->
+      <div class="panel" id="p-klinker" role="tabpanel" aria-labelledby="tab-klinker" hidden>
+        <div class="panel-card">
+          <div class="panel-photo"><img src="assets/img/mat-klinker.webp" alt="Клинкерная брусчатка красного цвета" loading="lazy" width="1400" height="1400"></div>
+          <div class="panel-body">
+            <div class="panel-head">
+              <h3 class="panel-name">Клинкерная</h3>
+              <span class="panel-price">от 2 450 ₽ <small>/ м² под ключ</small></span>
+            </div>
+            <p class="panel-text">
+              Обожжённая глина, а не бетон: цвет идёт на всю глубину камня и не выгорает
+              вообще никогда. Водопоглощение меньше 3% — клинкер не темнеет от дождя
+              и не «цветёт» зелёным с северной стороны. Самое долговечное, что можно положить под ноги.
+            </p>
+            <ul class="panel-specs">
+              <li><span>Толщина</span><b>45–52 мм</b></li>
+              <li><span>Морозостойкость</span><b>F300 и выше</b></li>
+              <li><span>Срок службы</span><b>50+ лет, без потери цвета</b></li>
+            </ul>
+            <ul class="panel-props">
+              <li>Цвет на всю глубину</li>
+              <li>Не скользит после дождя</li>
+              <li>Подходит к кирпичному дому</li>
+            </ul>
+            <button class="btn btn-primary" data-book="покрытие: Клинкер">Посчитать с этим покрытием</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Гранит -->
+      <div class="panel" id="p-granite" role="tabpanel" aria-labelledby="tab-granite" hidden>
+        <div class="panel-card">
+          <div class="panel-photo"><img src="assets/img/mat-granit.webp" alt="Гранитная колотая брусчатка" loading="lazy" width="1400" height="934"></div>
+          <div class="panel-body">
+            <div class="panel-head">
+              <h3 class="panel-name">Гранит колотый</h3>
+              <span class="panel-price">от 3 100 ₽ <small>/ м² под ключ</small></span>
+            </div>
+            <p class="panel-text">
+              Природный камень 100×100×50 или 100×100×100 мм, колотый с шести сторон.
+              Кладётся дольше и дороже всего — зато это покрытие переживёт дом.
+              Берут на въездную группу и на площадку у крыльца, остальное добирают бетоном в тон.
+            </p>
+            <ul class="panel-specs">
+              <li><span>Размер</span><b>100×100×50, 100×100×100 мм</b></li>
+              <li><span>Работа</span><b>Ручная подгонка каждого камня</b></li>
+              <li><span>Швы</span><b>8–12 мм, полимерная смесь</b></li>
+            </ul>
+            <ul class="panel-props">
+              <li>Вечное покрытие</li>
+              <li>Выдерживает грузовой транспорт</li>
+              <li>Сложная укладка — только опытной бригадой</li>
+            </ul>
+            <button class="btn btn-primary" data-book="покрытие: Гранит">Посчитать с этим покрытием</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Плита -->
+      <div class="panel" id="p-slab" role="tabpanel" aria-labelledby="tab-slab" hidden>
+        <div class="panel-card">
+          <div class="panel-photo"><img src="assets/img/mat-hex.webp" alt="Крупноформатная плита шестигранной формы" loading="lazy" width="1400" height="2100"></div>
+          <div class="panel-body">
+            <div class="panel-head">
+              <h3 class="panel-name">Плита большого формата</h3>
+              <span class="panel-price">от 1 450 ₽ <small>/ м² под ключ</small></span>
+            </div>
+            <p class="panel-text">
+              Форматы 400×400, 600×300, шестигранник. Минимум швов, современный вид,
+              хорошо смотрится рядом с домом в стиле хай-тек и с газоном в разбежку.
+              Требует более точного основания: крупная плита не прощает перепадов.
+            </p>
+            <ul class="panel-specs">
+              <li><span>Толщина</span><b>60–80 мм</b></li>
+              <li><span>Нагрузка</span><b>Пешеходная, легковая — от 80 мм</b></li>
+              <li><span>Вариант</span><b>Укладка в газон с разбежкой</b></li>
+            </ul>
+            <ul class="panel-props">
+              <li>Минимум швов</li>
+              <li>Современная геометрия</li>
+              <li>Быстрая укладка на больших площадях</li>
+            </ul>
+            <button class="btn btn-primary" data-book="покрытие: Плита">Посчитать с этим покрытием</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= РАБОТЫ ======================= -->
+<section id="works">
+  <div class="wrap">
+    <div class="strip-head reveal">
+      <div>
+        <span class="eyebrow">Наши объекты</span>
+        <h2 class="h-sec">Работы за последние сезоны</h2>
+        <p class="sub-sec" style="margin-bottom:0">
+          Снято на сдаче объекта, без обработки. Листайте пальцем или мышью.
+        </p>
+      </div>
+      <div class="strip-nav" data-nav-for="works-strip">
+        <button class="nav-btn" data-dir="-1" aria-label="Предыдущие работы">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="nav-btn" data-dir="1" aria-label="Следующие работы">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="strip strip-bleed reveal" id="works-strip">
+      <figure class="work"><img src="assets/img/work-01.webp" alt="Садовая дорожка из серой брусчатки" loading="lazy"><figcaption class="work-cap"><b>Дорожка, 48 м²</b><span>Вибропрессованная · Истра</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-02.webp" alt="Изогнутая дорожка из брусчатки вдоль газона" loading="lazy"><figcaption class="work-cap"><b>Обход дома, 62 м²</b><span>«Старый город» · Одинцово</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-03.webp" alt="Дорожка с подпорной стенкой" loading="lazy"><figcaption class="work-cap"><b>Спуск к террасе, 90 м²</b><span>Плита 60×30 · Пушкино</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-04.webp" alt="Круглая площадка из брусчатки" loading="lazy"><figcaption class="work-cap"><b>Круглая площадка, 74 м²</b><span>Веерная раскладка · Дмитров</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-13.webp" alt="Автомобиль на брусчатой площадке перед домом" loading="lazy"><figcaption class="work-cap"><b>Парковка на две машины</b><span>Основание 25 см · Красногорск</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-15.webp" alt="Извилистая дорожка из брусчатки в саду" loading="lazy"><figcaption class="work-cap"><b>Сад, 120 м²</b><span>Вибропрессованная · Наро-Фоминск</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-05.webp" alt="Дорожка вдоль забора" loading="lazy"><figcaption class="work-cap"><b>Дорожка у забора, 36 м²</b><span>Плита 40×40 · Химки</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-08.webp" alt="Брусчатка, уложенная ёлочкой" loading="lazy"><figcaption class="work-cap"><b>Въезд, 58 м²</b><span>Раскладка «ёлочка» · Мытищи</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-09.webp" alt="Светлая брусчатка «волна»" loading="lazy"><figcaption class="work-cap"><b>Двор, 150 м²</b><span>«Волна» · Домодедово</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-10.webp" alt="Крупная гранитная брусчатка" loading="lazy"><figcaption class="work-cap"><b>Въездная группа, 40 м²</b><span>Гранит колотый · Барвиха</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-12.webp" alt="Дорожка с полосой из плитки и травы" loading="lazy"><figcaption class="work-cap"><b>Дорожка в газон, 28 м²</b><span>Плита с разбежкой · Балашиха</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-14.webp" alt="Двор частного дома с брусчатым въездом" loading="lazy"><figcaption class="work-cap"><b>Участок под ключ, 310 м²</b><span>Двор, въезд, дорожки · Апрелевка</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-16.webp" alt="Шаговые плиты в газоне" loading="lazy"><figcaption class="work-cap"><b>Шаговая дорожка, 18 м²</b><span>Плита в газон · Лобня</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-17.webp" alt="Дорожка вдоль подпорной стенки" loading="lazy"><figcaption class="work-cap"><b>Технический проход, 44 м²</b><span>Вибропрессованная · Щёлково</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-06.webp" alt="Брусчатка со швами, заполненными песком" loading="lazy"><figcaption class="work-cap"><b>Швы через сезон</b><span>Полимерная смесь · Люберцы</span></figcaption></figure>
+      <figure class="work"><img src="assets/img/work-07.webp" alt="Фигурная брусчатка тёмного цвета" loading="lazy"><figcaption class="work-cap"><b>Площадка у гаража, 52 м²</b><span>«Катушка» · Подольск</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ЭТАПЫ ======================= -->
+<section id="how">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Как проходит работа</span>
+      <h2 class="h-sec">Пять шагов<br>и ни одного сюрприза</h2>
+      <p class="sub-sec">
+        Средний двор на 100 м² занимает 5–7 рабочих дней. Дату начала и дату сдачи пишем в договор.
+      </p>
+    </div>
+
+    <div class="steps">
+      <article class="step reveal">
+        <div class="step-n">1</div>
+        <h3>Замер</h3>
+        <p>Приезжаем, меряем площадь, смотрим грунт, уклоны и куда уходит вода. Бесплатно и ни к чему не обязывает.</p>
+        <span class="step-time">1–2 дня</span>
+      </article>
+
+      <article class="step reveal">
+        <div class="step-n">2</div>
+        <h3>Смета и договор</h3>
+        <p>Считаем объёмы по факту, а не «примерно». Смета — приложение к договору, цена в процессе не меняется.</p>
+        <span class="step-time">1 день</span>
+      </article>
+
+      <article class="step reveal">
+        <div class="step-n">3</div>
+        <h3>Корыто и основание</h3>
+        <p>Снимаем грунт, вывозим, стелем геотекстиль, отсыпаем и трамбуем слоями. Самый долгий и самый важный этап.</p>
+        <span class="step-time">2–4 дня</span>
+      </article>
+
+      <article class="step reveal">
+        <div class="step-n">4</div>
+        <h3>Бордюр и укладка</h3>
+        <p>Ставим бордюр на бетон, тянем шнур, кладём камень с подрезкой по месту. Каждый вечер убираем за собой.</p>
+        <span class="step-time">2–3 дня</span>
+      </article>
+
+      <article class="step reveal">
+        <div class="step-n">5</div>
+        <h3>Сдача и гарантия</h3>
+        <p>Заполняем швы, проходим виброплитой с подошвой, проливаем водой при вас. Подписываем акт, отдаём гарантию.</p>
+        <span class="step-time">1 день</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ОТЗЫВЫ ======================= -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="strip-head reveal">
+      <div>
+        <span class="eyebrow">Отзывы</span>
+        <h2 class="h-sec">Что говорят заказчики</h2>
+        <p class="sub-sec" style="margin-bottom:0">Отзывы с Яндекс Карт и Авито, публикуем как есть.</p>
+      </div>
+      <div class="strip-nav" data-nav-for="reviews-strip">
+        <button class="nav-btn" data-dir="-1" aria-label="Предыдущие отзывы">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="nav-btn" data-dir="1" aria-label="Следующие отзывы">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="strip strip-bleed reveal" id="reviews-strip">
+
+      <article class="review">
+        <div class="review-top">
+          <div class="ava">А</div>
+          <div>
+            <div class="review-name">Андрей Л.</div>
+            <div class="review-meta">Двор 180 м² · Красногорск</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">До этого двор мне уже делала одна бригада — через две зимы у ворот появилась яма, вода стояла лужей у самого крыльца. Здесь начали с того, что вскрыли старое и показали, почему так вышло: под плиткой был песок, щебня не было вообще. Переделали с нуля, основание 25 сантиметров, поставили два дождеприёмника. Перед сдачей вылили на площадку несколько вёдер воды и стояли смотрели, как она уходит — мне это понравилось больше всего, потому что проверить я бы сам не догадался. Третий сезон, ровно.</p>
+        <button class="review-more">Читать полностью</button>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <div class="ava">М</div>
+          <div>
+            <div class="review-name">Марина и Сергей</div>
+            <div class="review-meta">Дорожки 96 м² · Пушкино</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Понравилось, что смета не поехала. Назвали сумму на замере, в конце заплатили ровно её же, хотя пришлось повозиться с уклоном у бани.</p>
+        <button class="review-more">Читать полностью</button>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <div class="ava">И</div>
+          <div>
+            <div class="review-name">Игорь В.</div>
+            <div class="review-meta">Парковка 60 м² · Мытищи</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Заказывал парковку под две машины, одна из них тяжёлая. Я просил сделать подешевле, и меня честно отговорили: объяснили, что на 15 сантиметрах щебня джип продавит колею за сезон, и показали фото такого объекта. В итоге сделали 25 сантиметров, вышло дороже на 40 тысяч, но я хотя бы понимал, за что плачу. Отдельно скажу про уборку: каждый вечер подметали за собой, мусор вывезли в тот же день, а не «потом заберём».</p>
+        <button class="review-more">Читать полностью</button>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <div class="ava">Е</div>
+          <div>
+            <div class="review-name">Елена Т.</div>
+            <div class="review-meta">Площадка 74 м² · Дмитров</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Делали круглую площадку веером — я боялась, что получится криво, рисунок сложный. Разметили шнуром и колышками, всё сошлось идеально. Соседи приходили смотреть.</p>
+        <button class="review-more">Читать полностью</button>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <div class="ava">Д</div>
+          <div>
+            <div class="review-name">Дмитрий К.</div>
+            <div class="review-meta">Въезд 40 м² · Барвиха</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Гранит колотый, ручная подгонка. Работа кропотливая, шли на неделю дольше, чем планировали, — но предупредили заранее, а не по факту. Результат того стоил: выглядит как в городе на набережной, только у меня. Единственное замечание — за неделю до начала пришлось напоминать про дату, менеджер сам не позвонил. Мелочь, но из-за неё четыре звезды чуть не поставил.</p>
+        <button class="review-more">Читать полностью</button>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <div class="ava">О</div>
+          <div>
+            <div class="review-name">Ольга Н.</div>
+            <div class="review-meta">Дорожка 28 м² · Балашиха</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Маленький объём, взялись без разговоров «нам это неинтересно». Сделали за два дня, шов в газон вывели аккуратно, траву не вытоптали.</p>
+        <button class="review-more">Читать полностью</button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= БРИГАДА ======================= -->
+<section id="crew">
+  <div class="wrap crew-grid">
+    <div class="crew-photo reveal">
+      <img src="assets/img/team-1.webp" alt="Виктор — бригадир «Каменного Двора»" loading="lazy" width="1400" height="1615">
+    </div>
+
+    <div class="reveal">
+      <span class="eyebrow">Кто работает</span>
+      <h2 class="h-sec">Виктор и постоянная бригада</h2>
+      <p style="color:var(--slate); margin:0 0 16px">
+        Мощением я занимаюсь с 2014 года, до этого восемь лет работал в дорожной организации —
+        оттуда привычка считать основание, а не класть «как на даче». Бригада у меня постоянная,
+        четыре человека, все работают со мной больше пяти лет. Это значит, что на ваш участок
+        приедут те же люди, что были на объектах в портфолио, а не случайные руки с биржи.
+      </p>
+      <p style="color:var(--slate); margin:0 0 16px">
+        Мы намеренно не берём больше трёх объектов в месяц. Мощение — работа, где спешка
+        видна через год: недотрамбовали слой, не выдержали уклон, поленились подрезать камень
+        и забили щель раствором. Лучше сделаем меньше дворов, но к каждому сможем вернуться
+        по гарантии без неприятного разговора.
+      </p>
+      <p style="color:var(--slate); margin:0">
+        Если по расчёту выходит, что вам хватит покрытия дешевле, я так и скажу.
+        Продать гранит там, где достаточно бетона, — разовая выгода, а мне нужны рекомендации соседям.
+      </p>
+
+      <div class="crew-sign">Виктор Свиридов</div>
+      <p class="crew-role">Бригадир · 12 лет на мощении · 340+ сданных объектов</p>
+
+      <div class="msgs">
+        <a class="msg" href="https://wa.me/79000000000" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5v-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.5 1.1 2.9 1.2 3.1.2.2 2.2 3.4 5.3 4.6 2.6 1 3.1.8 3.7.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4Z"/></svg>
+          WhatsApp
+        </a>
+        <a class="msg" href="https://t.me/kamenny_dvor" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.8 19c-.2 1-.9 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8 8.7-7.9c.4-.3-.1-.5-.6-.2L6.7 12.9 2 11.4c-1-.3-1-1 .2-1.5l18.3-7c.9-.3 1.6.2 1.4 1.4Z"/></svg>
+          Telegram
+        </a>
+        <a class="msg" href="tel:+79000000000">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          Позвонить
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ГДЕ РАБОТАЕМ ======================= -->
+<section id="geo">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">География</span>
+      <h2 class="h-sec">Москва и область<br>в радиусе 80 км</h2>
+      <p class="sub-sec">
+        Дальше 80 километров от МКАД выезжаем только на объекты от 150 м² — иначе дорога
+        и логистика техники съедают смысл для обеих сторон.
+      </p>
+    </div>
+
+    <div class="geo-grid">
+      <div class="geo-photo reveal">
+        <img src="assets/img/obj-1.webp" alt="Современный дом с вымощенным двором" loading="lazy" width="1400" height="934">
+      </div>
+
+      <div class="geo-card reveal">
+        <h3>Как начать</h3>
+        <ul class="geo-list">
+          <li>
+            <span class="geo-ic" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <span><b>Бесплатный замер</b>Приезжаем в течение двух дней, в том числе в субботу. Замер ни к чему не обязывает.</span>
+          </li>
+          <li>
+            <span class="geo-ic" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <span><b>Сезон с апреля по ноябрь</b>Зимой мощение не ведём: грунт промёрз, уплотнить основание невозможно. Зимой — только замеры и договоры на весну.</span>
+          </li>
+          <li>
+            <span class="geo-ic" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h16M6 17l1-6a2 2 0 0 1 2-1.6h6A2 2 0 0 1 17 11l1 6M7 20v-3m10 3v-3"/></svg>
+            </span>
+            <span><b>Своя техника</b>Виброплиты, трамбовки, резчик швов и самосвал — не арендуем и не ждём очереди.</span>
+          </li>
+        </ul>
+
+        <div class="geo-tags">
+          <span>Одинцово</span><span>Красногорск</span><span>Мытищи</span><span>Пушкино</span>
+          <span>Истра</span><span>Домодедово</span><span>Подольск</span><span>Дмитров</span>
+          <span>Балашиха</span><span>Наро-Фоминск</span><span>Щёлково</span><span>Химки</span>
+        </div>
+
+        <div class="geo-thumbs">
+          <img src="assets/img/obj-4.webp" alt="Участок с мощением у дома" loading="lazy">
+          <img src="assets/img/work-02.webp" alt="Дорожка из брусчатки" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section id="faq">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Вопросы</span>
+      <h2 class="h-sec">Спрашивают чаще всего</h2>
+    </div>
+
+    <div class="faq">
+      <div class="q reveal">
+        <button class="q-btn">Сколько стоит квадратный метр под ключ<span class="q-sign" aria-hidden="true"></span></button>
+        <div class="q-body"><div><p>Пешеходная дорожка из вибропрессованной брусчатки — от 1 180 ₽ за м², въезд под машину — от 1 700 ₽ за м², гранит — от 3 100 ₽. В цену входит земляная работа, вывоз грунта, геотекстиль, щебень, ЦПС, материал и укладка. Не входит: бордюр (считаем погонными метрами), водоотвод и демонтаж старого покрытия — они нужны не всем. Посчитать свой вариант можно калькулятором выше, он использует те же цифры, что и наша смета.</p></div></div>
+      </div>
+
+      <div class="q reveal">
+        <button class="q-btn">Почему нельзя класть просто на песок<span class="q-sign" aria-hidden="true"></span></button>
+        <div class="q-body"><div><p>Можно — на дорожку в саду, по которой ходят летом и в тапках. Песок не держит распорную нагрузку: под колесом он расходится в стороны, и камень проваливается. Плюс песок капиллярно тянет воду снизу, зимой она замерзает и поднимает покрытие. Щебень эту связь разрывает и работает как дренирующий слой. Поэтому под любой заезд щебень обязателен, а на дорожку мы его кладём хотя бы 15 см — разница в цене невелика, а разница в сроке службы — в разы.</p></div></div>
+      </div>
+
+      <div class="q reveal">
+        <button class="q-btn">Что с гарантией и что она покрывает<span class="q-sign" aria-hidden="true"></span></button>
+        <div class="q-body"><div><p>Пять лет на работы, гарантия прописана в договоре и подкреплена актом с объёмами. Покрывает просадку, расхождение швов, разрушение бордюра и всё, что связано с основанием, — то есть то, за что отвечаем мы. Не покрывает: сколы от удара, следы от разлитого бензина и химии, разрушение от техники тяжелее той, под которую считалось основание. Если что-то просело — приезжаем, вскрываем, переделываем за свой счёт. За пять лет таких выездов было четыре, все закрыли за два дня.</p></div></div>
+      </div>
+
+      <div class="q reveal">
+        <button class="q-btn">В какое время года лучше укладывать<span class="q-sign" aria-hidden="true"></span></button>
+        <div class="q-body"><div><p>С конца апреля по начало ноября, пока грунт не промёрз. Лучшие месяцы — май и сентябрь: земля уже (или ещё) сухая, работать быстрее, и очередь короче, чем в июле. Зимой мощение не ведём принципиально: уплотнить мёрзлый грунт нельзя, а весной такое основание поплывёт. Если пишете зимой — сделаем замер и зафиксируем цену прошлого сезона на весенний объект.</p></div></div>
+      </div>
+
+      <div class="q reveal">
+        <button class="q-btn">Нужно ли моё присутствие на объекте<span class="q-sign" aria-hidden="true"></span></button>
+        <div class="q-body"><div><p>Обязательно — на замере и на сдаче. В остальные дни не нужно: бригада работает автономно, вечером присылаем фото с объекта в WhatsApp. Важный момент — согласование до начала: после того как подписали разметку и раскладку, менять рисунок посреди укладки дорого и долго, потому что материал заказывается по расчёту. Всё, что хочется поменять, лучше проговорить на замере.</p></div></div>
+      </div>
+
+      <div class="q reveal">
+        <button class="q-btn">Между камнями растёт трава — это брак<span class="q-sign" aria-hidden="true"></span></button>
+        <div class="q-body"><div><p>Нет, это свойство швов, заполненных песком: семена заносит ветром, и они прорастают сверху, а не снизу. Решается двумя способами. Первый — полимерная смесь для швов вместо песка, она твердеет и не даёт пробиться траве, это +160 ₽ за м². Второй — раз в сезон пройтись гербицидом или просто выщипать, обычно хватает получаса на весь двор. Если геотекстиль уложен правильно, снизу ничего не пробьётся.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ПАМЯТКА ======================= -->
+<section id="care">
+  <div class="wrap">
+    <div class="care reveal">
+      <span class="eyebrow">Памятка</span>
+      <h2 class="h-sec" style="margin-bottom:10px">После укладки</h2>
+      <p style="color:var(--slate); margin:0; max-width:58ch">
+        Брусчатка не требует ухода — но пять правил продлевают ей жизнь
+        и избавляют от самых обидных повреждений.
+      </p>
+
+      <div class="care-grid">
+        <div class="care-item">
+          <span class="care-ic" aria-hidden="true">7</span>
+          <span><b>Неделю не грузить</b><span>Пешком ходить можно сразу, машину лучше загнать через 5–7 дней: швы должны осесть.</span></span>
+        </div>
+        <div class="care-item">
+          <span class="care-ic" aria-hidden="true">≡</span>
+          <span><b>Досыпать швы весной</b><span>После первой зимы песок в швах садится. Досыпать и промести — полчаса работы.</span></span>
+        </div>
+        <div class="care-item">
+          <span class="care-ic" aria-hidden="true">✕</span>
+          <span><b>Без соли и кислоты</b><span>Техническая соль разъедает бетон. Зимой — песок или гранитная крошка.</span></span>
+        </div>
+        <div class="care-item">
+          <span class="care-ic" aria-hidden="true">↓</span>
+          <span><b>Лопата пластиковая</b><span>Металлической кромкой легко сколоть фаску, особенно на вибролитой плитке.</span></span>
+        </div>
+        <div class="care-item">
+          <span class="care-ic" aria-hidden="true">≈</span>
+          <span><b>Мойка — без фанатизма</b><span>Керхер держим под углом и не ближе 30 см, иначе вымывается песок из швов.</span></span>
+        </div>
+        <div class="care-item">
+          <span class="care-ic" aria-hidden="true">!</span>
+          <span><b>Пятно — сразу</b><span>Масло и бензин пока свежие оттираются средством для бетона. Через неделю — уже нет.</span></span>
+        </div>
+      </div>
+
+      <p class="care-note">
+        Один камень треснул или просел? Не трогайте: мы вынимаем и меняем его точечно,
+        без вскрытия всей площадки. В гарантийный период — бесплатно.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================= ПОДВАЛ ======================= -->
+<footer class="footer">
+  <div class="wrap">
+
+    <div class="promo reveal">
+      <span class="promo-badge" aria-hidden="true"></span>
+      <div>
+        <h3>Замер в этом месяце — бордюр в подарок</h3>
+        <p>
+          Записались на замер до конца месяца и подписали договор — бордюр по периметру
+          мощения ставим за свой счёт. На объекте 100 м² это примерно 30 000 ₽ экономии.
+        </p>
+      </div>
+      <button class="btn btn-primary btn-lg" data-book="акция: бордюр в подарок">Записаться на замер</button>
+    </div>
+
+    <div class="foot-grid">
+      <div>
+        <p class="foot-t">Каменный Двор</p>
+        <a class="foot-phone" href="tel:+79000000000">+7 900 000-00-00</a>
+        <ul class="foot-list">
+          <li><a href="mailto:info@kamenny-dvor.ru">info@kamenny-dvor.ru</a></li>
+          <li>Пн–Сб 8:00–20:00, воскресенье — по договорённости</li>
+          <li>Москва и область, до 80 км от МКАД</li>
+        </ul>
+        <div class="socials">
+          <a class="soc" href="https://wa.me/79000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5v-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.5 1.1 2.9 1.2 3.1.2.2 2.2 3.4 5.3 4.6 2.6 1 3.1.8 3.7.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4Z"/></svg>
+          </a>
+          <a class="soc" href="https://t.me/kamenny_dvor" target="_blank" rel="noopener" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.8 19c-.2 1-.9 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8 8.7-7.9c.4-.3-.1-.5-.6-.2L6.7 12.9 2 11.4c-1-.3-1-1 .2-1.5l18.3-7c.9-.3 1.6.2 1.4 1.4Z"/></svg>
+          </a>
+          <a class="soc" href="https://vk.com/kamenny_dvor" target="_blank" rel="noopener" aria-label="ВКонтакте">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 18.4c-6 0-9.4-4.1-9.6-11h3c.1 5 2.4 7.1 4.2 7.6V7.4h2.8v4.3c1.8-.2 3.6-2.2 4.2-4.3h2.8a8.4 8.4 0 0 1-3.8 5.5 8.7 8.7 0 0 1 4.5 5.5h-3.1c-.6-1.9-2.2-3.4-4.6-3.7v3.7H13Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <p class="foot-t">Покрытия</p>
+        <ul class="foot-list">
+          <li><a href="#materials">Вибропрессованная — от 1 180 ₽/м²</a></li>
+          <li><a href="#materials">«Волна», «Катушка» — от 1 320 ₽/м²</a></li>
+          <li><a href="#materials">«Старый город» — от 1 640 ₽/м²</a></li>
+          <li><a href="#materials">Клинкер — от 2 450 ₽/м²</a></li>
+          <li><a href="#materials">Гранит колотый — от 3 100 ₽/м²</a></li>
+          <li><a href="#materials">Плита 40×40 — от 1 450 ₽/м²</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="foot-t">Компания</p>
+        <ul class="foot-list">
+          <li><a href="#calc">Калькулятор стоимости</a></li>
+          <li><a href="#pie">Пирог основания</a></li>
+          <li><a href="#works">Наши работы</a></li>
+          <li><a href="#how">Этапы работы</a></li>
+          <li><a href="#crew">О бригаде</a></li>
+          <li><a href="#faq">Вопросы и ответы</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copy">
+      <span>© 2026 «Каменный Двор» — мощение и благоустройство</span>
+      <span>Учебный проект. Контакты, цены и адреса — демонстрационные.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- нижняя панель на телефоне -->
+<div class="dock" id="dock">
+  <button class="btn btn-primary" data-book="нижняя кнопка">Бесплатный замер</button>
+  <a class="btn btn-ghost" href="tel:+79000000000" aria-label="Позвонить">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+  </a>
+</div>
+
+<!-- ======================= МОДАЛКА ЗАЯВКИ ======================= -->
+<div class="overlay" id="book-overlay" role="dialog" aria-modal="true" aria-labelledby="book-title" hidden>
+  <div class="modal">
+    <button class="modal-close" data-close aria-label="Закрыть">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+
+    <div id="book-form-wrap">
+      <h3 id="book-title">Бесплатный замер</h3>
+      <p class="modal-sub">Оставьте контакты — перезвоню в течение часа, согласуем день выезда.</p>
+
+      <form id="book-form" novalidate>
+        <div class="field" id="f-name">
+          <label for="i-name">Как к вам обращаться</label>
+          <input id="i-name" name="name" type="text" autocomplete="name" placeholder="Андрей" required>
+          <span class="field-err">Напишите имя — хотя бы две буквы</span>
+        </div>
+
+        <div class="field" id="f-phone">
+          <label for="i-phone">Телефон</label>
+          <input id="i-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (900) 000-00-00" required>
+          <span class="field-err">Проверьте номер: нужно 11 цифр</span>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="i-object">Что мостим</label>
+            <select id="i-object" name="object">
+              <option>Пока не решил, нужен совет</option>
+              <option>Двор целиком</option>
+              <option>Въезд и парковка</option>
+              <option>Дорожки по участку</option>
+              <option>Площадка у дома или беседки</option>
+              <option>Переделка старого покрытия</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="i-when">Когда планируете</label>
+            <select id="i-when" name="when">
+              <option>Как можно скорее</option>
+              <option>В течение месяца</option>
+              <option>В этом сезоне</option>
+              <option>В следующем сезоне</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="i-comment">Комментарий</label>
+          <textarea id="i-comment" name="comment" placeholder="Например: площадь около 90 м², заезжает микроавтобус, у ворот стоит вода"></textarea>
+        </div>
+
+        <input type="hidden" name="source" id="i-source" value="сайт">
+
+        <button class="btn btn-primary btn-lg" type="submit" id="book-submit">Отправить заявку</button>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку контактных данных.<br>Звоним один раз — без рассылок и автообзвона.</p>
+      </form>
+    </div>
+
+    <div class="done" id="book-done" hidden>
+      <div class="done-ic">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+      </div>
+      <h3>Заявка отправлена</h3>
+      <p id="done-text">Спасибо! Перезвоню в течение часа — в рабочее время обычно быстрее.</p>
+      <button class="btn btn-ghost" data-close>Хорошо</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= МОДАЛКА ОТЗЫВА ======================= -->
+<div class="overlay" id="review-overlay" role="dialog" aria-modal="true" aria-labelledby="review-title" hidden>
+  <div class="modal modal-review">
+    <button class="modal-close" data-close aria-label="Закрыть">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="review-top">
+      <div class="ava" id="review-ava">А</div>
+      <div>
+        <div class="review-name" id="review-title">Андрей Л.</div>
+        <div class="review-meta" id="review-meta">Двор 180 м²</div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+    <p class="modal-text" id="review-full"></p>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   Приём заявок.
+   Сюда вставляется ссылка развёрнутого веб-приложения Apps Script
+   (Развернуть → Веб-приложение → доступ «У всех»), вида:
+   https://script.google.com/macros/s/AKfy.../exec
+   Код скрипта лежит рядом в файле apps-script.gs
+   ============================================================ */
+const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx6DzJNL8H0cDab5uxgeIWTBGQ_qABrVT6KcUZuNAJmMi_HU7g9WcAoFuH6k0IjpqDs/exec';
+
+(function(){
+  'use strict';
+
+  const $  = (s, c) => (c || document).querySelector(s);
+  const $$ = (s, c) => Array.from((c || document).querySelectorAll(s));
+
+  /* ---------- шапка: липкость ---------- */
+  const header = $('#header');
+  const onScrollHeader = () => header.classList.toggle('is-stuck', window.scrollY > 12);
+  onScrollHeader();
+  window.addEventListener('scroll', onScrollHeader, { passive: true });
+
+  /* ---------- появление блоков ---------- */
+  const revealIO = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); revealIO.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+  $$('.reveal').forEach((el) => revealIO.observe(el));
+
+  /* ============================================================
+     КАЛЬКУЛЯТОР
+     Считаем «под ключ»: основание + материал с укладкой + допы.
+     Периметр прикидываем как у прямоугольника 1:1.6 — так ближе
+     к реальному двору, чем квадрат.
+     ============================================================ */
+  const CURB_PRICE  = 760;   // ₽ за погонный метр бордюра на бетоне
+  const DRAIN_PRICE = 210;   // ₽/м² площади — лотки и дождеприёмники
+  const DEMO_PRICE  = 390;   // ₽/м² — демонтаж и вывоз
+  const HEAT_PRICE  = 2900;  // ₽/м² — греющий кабель
+
+  const area    = $('#c-area');
+  const sumEl   = $('#c-sum');
+  const perEl   = $('#c-per');
+  const linesEl = $('#c-lines');
+
+  const money = (n) => Math.round(n).toLocaleString('ru-RU') + ' ₽';
+  // вилку показываем круглыми тысячами — точность до рубля здесь была бы обманом
+  const round1k = (n) => Math.round(n / 1000) * 1000;
+  const thou = (n) => round1k(n).toLocaleString('ru-RU');
+
+  function perimeter(s){
+    // прямоугольник со сторонами a и 1.6a: S = 1.6a², P = 5.2a
+    const a = Math.sqrt(s / 1.6);
+    return 5.2 * a;
+  }
+
+  function calc(){
+    const s = Math.min(3000, Math.max(0, Number(area.value) || 0));
+
+    const cover = $('input[name="cover"]:checked');
+    const load  = $('input[name="load"]:checked');
+
+    const coverPrice = Number(cover.dataset.price);
+    const basePrice  = Number(load.dataset.base);
+    const k          = Number(load.dataset.k);
+
+    const parts = {
+      base:  s * basePrice,
+      cover: s * coverPrice * k,
+      curb:  $('#a-curb').checked  ? perimeter(s) * CURB_PRICE : 0,
+      drain: $('#a-drain').checked ? s * DRAIN_PRICE : 0,
+      demo:  $('#a-demo').checked  ? s * DEMO_PRICE  : 0,
+      heat:  $('#a-heat').checked  ? s * HEAT_PRICE  : 0
+    };
+
+    const total = Object.values(parts).reduce((a, b) => a + b, 0);
+
+    $$('li', linesEl).forEach((li) => {
+      const v = parts[li.dataset.line];
+      li.classList.toggle('is-off', !v);
+      if (v) $('b', li).textContent = money(v);
+    });
+
+    if (!s || !total) {
+      sumEl.firstChild.nodeValue = '— ₽';
+      perEl.textContent = 'Укажите площадь, чтобы увидеть расчёт';
+      return null;
+    }
+
+    const lo = total * 0.92, hi = total * 1.08;
+    sumEl.firstChild.nodeValue = thou(lo) + ' — ' + thou(hi) + ' ₽';
+    perEl.textContent = 'Это ' + money(total / s) + ' за м² · ' + s + ' м² · ' + load.dataset.name.toLowerCase();
+
+    return {
+      area: s,
+      cover: cover.dataset.name,
+      load: load.dataset.name,
+      adds: $$('.adds input:checked').map((i) => i.dataset.name),
+      total: Math.round(total),
+      lo: round1k(lo),
+      hi: round1k(hi)
+    };
+  }
+
+  $$('#calc input').forEach((i) => i.addEventListener('input', calc));
+  $$('.area-quick button').forEach((b) => b.addEventListener('click', () => {
+    area.value = b.dataset.area;
+    calc();
+  }));
+  calc();
+
+  /* ---------- табы покрытий ---------- */
+  const tabs   = $$('.tab');
+  const panels = $$('.panel');
+
+  function selectTab(i){
+    tabs.forEach((t, k) => t.setAttribute('aria-selected', String(k === i)));
+    panels.forEach((p, k) => {
+      p.classList.toggle('is-on', k === i);
+      p.hidden = k !== i;
+    });
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => {
+      selectTab(i);
+      t.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+    });
+    t.addEventListener('keydown', (e) => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      const n = (i + d + tabs.length) % tabs.length;
+      selectTab(n); tabs[n].focus();
+    });
+  });
+
+  /* ---------- ленты: перетаскивание мышью + стрелки ---------- */
+  $$('.strip').forEach((strip) => {
+    let down = false, moved = false, startX = 0, startScroll = 0;
+
+    strip.addEventListener('mousedown', (e) => {
+      if (e.button !== 0) return;
+      down = true; moved = false;
+      startX = e.pageX;
+      startScroll = strip.scrollLeft;
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (!down) return;
+      const dx = e.pageX - startX;
+      if (!moved && Math.abs(dx) > 4) { moved = true; strip.classList.add('is-drag'); }
+      if (moved) { e.preventDefault(); strip.scrollLeft = startScroll - dx; }
+    });
+    window.addEventListener('mouseup', () => {
+      if (!down) return;
+      down = false;
+      strip.classList.remove('is-drag');
+    });
+    strip.addEventListener('dragstart', (e) => e.preventDefault());
+  });
+
+  $$('.strip-nav').forEach((nav) => {
+    const strip = document.getElementById(nav.dataset.navFor);
+    if (!strip) return;
+    const [prev, next] = $$('.nav-btn', nav);
+
+    const step = () => {
+      const card = strip.querySelector(':scope > *');
+      const gap  = parseFloat(getComputedStyle(strip).columnGap || '14');
+      return card ? card.getBoundingClientRect().width + gap : 300;
+    };
+    const sync = () => {
+      const max = strip.scrollWidth - strip.clientWidth - 2;
+      prev.disabled = strip.scrollLeft <= 2;
+      next.disabled = strip.scrollLeft >= max;
+    };
+
+    $$('.nav-btn', nav).forEach((b) => b.addEventListener('click', () => {
+      strip.scrollBy({ left: step() * Number(b.dataset.dir) * 2, behavior: 'smooth' });
+    }));
+    strip.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  });
+
+  /* ---------- FAQ ---------- */
+  $$('.q-btn').forEach((btn) => {
+    const q = btn.closest('.q');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.addEventListener('click', () => {
+      const open = q.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+
+  /* ---------- модальные окна ---------- */
+  let lastFocus = null;
+
+  function openModal(overlay){
+    lastFocus = document.activeElement;
+    overlay.hidden = false;
+    requestAnimationFrame(() => overlay.classList.add('is-open'));
+    document.body.classList.add('is-locked');
+    const target = overlay.querySelector('input, button:not([data-close])');
+    if (target) setTimeout(() => target.focus({ preventScroll: true }), 260);
+  }
+  function closeModal(overlay){
+    overlay.classList.remove('is-open');
+    document.body.classList.remove('is-locked');
+    setTimeout(() => { overlay.hidden = true; }, 320);
+    if (lastFocus) lastFocus.focus({ preventScroll: true });
+  }
+
+  $$('.overlay').forEach((ov) => {
+    ov.addEventListener('click', (e) => { if (e.target === ov) closeModal(ov); });
+    $$('[data-close]', ov).forEach((b) => b.addEventListener('click', () => closeModal(ov)));
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const open = $('.overlay.is-open');
+    if (open) closeModal(open);
+  });
+
+  /* ---------- заявка ---------- */
+  const bookOverlay = $('#book-overlay');
+  const formWrap    = $('#book-form-wrap');
+  const doneBlock   = $('#book-done');
+  const form        = $('#book-form');
+  const submitBtn   = $('#book-submit');
+  const objectSel   = $('#i-object');
+  const comment     = $('#i-comment');
+
+  // что видел пользователь в калькуляторе в момент отправки
+  let calcSnapshot = null;
+
+  $$('[data-book]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const src = btn.dataset.book || 'сайт';
+      $('#i-source').value = src;
+      calcSnapshot = null;
+
+      // кнопка из карточки покрытия — подставим его в комментарий
+      const m = src.match(/^покрытие:\s*(.+)$/);
+      if (m && !comment.value.trim()) {
+        comment.value = 'Интересует покрытие: ' + m[1].trim() + '.';
+      }
+
+      // кнопка из калькулятора — переносим расчёт в заявку
+      if (src === 'калькулятор') {
+        const r = calc();
+        if (r) {
+          calcSnapshot = r;
+          const adds = r.adds.length ? '\nДополнительно: ' + r.adds.join(', ') + '.' : '';
+          comment.value =
+            'Расчёт с сайта: ' + r.area + ' м², ' + r.cover + ', ' + r.load.toLowerCase() + '.' +
+            adds + '\nОриентировочно ' + r.lo.toLocaleString('ru-RU') + ' — ' +
+            r.hi.toLocaleString('ru-RU') + ' ₽.';
+        }
+      }
+
+      formWrap.hidden = false;
+      doneBlock.hidden = true;
+      openModal(bookOverlay);
+    });
+  });
+
+  /* маска телефона */
+  const phone = $('#i-phone');
+  phone.addEventListener('input', () => {
+    let d = phone.value.replace(/\D/g, '');
+    if (d.startsWith('8'))  d = '7' + d.slice(1);
+    if (d.startsWith('9') && d.length <= 10) d = '7' + d;
+    d = d.slice(0, 11);
+
+    let out = '+7';
+    if (d.length > 1)  out += ' (' + d.slice(1, 4);
+    if (d.length >= 5) out += ') ' + d.slice(4, 7);
+    if (d.length >= 8) out += '-' + d.slice(7, 9);
+    if (d.length >= 10) out += '-' + d.slice(9, 11);
+    phone.value = d.length <= 1 ? '' : out;
+  });
+
+  const digits = (s) => s.replace(/\D/g, '');
+
+  function validate(){
+    let ok = true;
+    const name = $('#i-name');
+
+    $('#f-name').classList.toggle('has-error', name.value.trim().length < 2);
+    if (name.value.trim().length < 2) ok = false;
+
+    const bad = digits(phone.value).length !== 11;
+    $('#f-phone').classList.toggle('has-error', bad);
+    if (bad) ok = false;
+
+    return ok;
+  }
+  ['#i-name', '#i-phone'].forEach((sel) => {
+    $(sel).addEventListener('input', () => $(sel).closest('.field').classList.remove('has-error'));
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!validate()) {
+      const first = $('.field.has-error input');
+      if (first) first.focus();
+      return;
+    }
+
+    const payload = {
+      name:    $('#i-name').value.trim(),
+      phone:   phone.value.trim(),
+      object:  objectSel.value,
+      when:    $('#i-when').value,
+      comment: comment.value.trim(),
+      source:  $('#i-source').value,
+      calc:    calcSnapshot
+        ? calcSnapshot.area + ' м², ' + calcSnapshot.cover + ', ' + calcSnapshot.load +
+          ', ~' + calcSnapshot.total.toLocaleString('ru-RU') + ' ₽'
+        : ''
+    };
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Отправляю…';
+
+    try {
+      if (FORM_ENDPOINT) {
+        // text/plain — чтобы браузер не слал preflight, который Apps Script не обрабатывает
+        await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+      } else {
+        console.warn('FORM_ENDPOINT пуст — заявка никуда не ушла:', payload);
+        $('#done-text').textContent =
+          'Демо-режим: приём заявок ещё не подключён. Заявка показана в консоли браузера.';
+      }
+      formWrap.hidden = true;
+      doneBlock.hidden = false;
+      form.reset();
+      calc();
+    } catch (err) {
+      console.error(err);
+      $('#done-text').textContent =
+        'Кажется, что-то пошло не так с отправкой. Напишите в WhatsApp — отвечу сразу.';
+      formWrap.hidden = true;
+      doneBlock.hidden = false;
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Отправить заявку';
+    }
+  });
+
+  /* ---------- отзывы: читать полностью ---------- */
+  const rOverlay = $('#review-overlay');
+  $$('.review-more').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.review');
+      $('#review-ava').textContent   = $('.ava', card).textContent;
+      $('#review-title').textContent = $('.review-name', card).textContent;
+      $('#review-meta').textContent  = $('.review-meta', card).textContent;
+      $('#review-full').textContent  = $('.review-text', card).textContent.trim();
+      openModal(rOverlay);
+    });
+  });
+
+  // короткие отзывы не обрезаются — прячем у них кнопку
+  requestAnimationFrame(() => {
+    $$('.review').forEach((card) => {
+      const t = $('.review-text', card);
+      if (t.scrollHeight - t.clientHeight < 6) $('.review-more', card).hidden = true;
+    });
+  });
+
+  /* ---------- нижняя панель на телефоне ---------- */
+  const dock = $('#dock');
+  document.body.classList.add('has-dock');
+  const hero = $('.hero');
+  const dockIO = new IntersectionObserver(([e]) => {
+    dock.classList.toggle('is-on', !e.isIntersecting);
+  }, { threshold: 0 });
+  if (hero) dockIO.observe(hero);
+})();
+</script>
+</body>
+</html>
